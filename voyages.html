@@ -1,32 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Guide français des voyages dans Torn City : destinations, temps de trajet, coûts, capacité de transport, fleurs, peluches et contrebande."
-    >
+    <title>Voyages dans Torn City — Guide français</title>
 
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description"
+          content="Guide français des voyages dans Torn City : destinations, temps de vol, coûts et objets disponibles à l'étranger.">
 
-    <meta
-        http-equiv="Content-Security-Policy"
-        content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self'; style-src 'self'; script-src 'none'; connect-src 'none';"
-    >
+    <meta name="robots" content="index, follow">
 
-    <link
-        rel="canonical"
-        href="https://durkskull.github.io/Torn-city-fr-guide/voyages.html"
-    >
-
-    <title>
-        Voyages dans Torn City : destinations et conseils | Torn City France
-    </title>
+    <link rel="canonical"
+          href="https://durkskull.github.io/Torn-city-fr-guide/voyages.html">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .travel-page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px 60px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin-bottom: 35px;
+        }
+
+        .notice {
+            margin: 25px 0;
+            padding: 16px 18px;
+            border-left: 4px solid currentColor;
+            background: rgba(127,127,127,.08);
+            border-radius: 6px;
+        }
+
+        .travel-table-wrap {
+            overflow-x: auto;
+            border: 1px solid rgba(127,127,127,.2);
+            border-radius: 10px;
+        }
+
+        .travel-table {
+            width: 100%;
+            min-width: 850px;
+            border-collapse: collapse;
+        }
+
+        .travel-table th,
+        .travel-table td {
+            padding: 11px 13px;
+            border-bottom: 1px solid rgba(127,127,127,.14);
+        }
+
+        .travel-table th {
+            text-align: left;
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            opacity: .7;
+            background: rgba(127,127,127,.08);
+        }
+
+        .travel-table th.number,
+        .travel-table td.number {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .travel-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .destination {
+            font-weight: 700;
+        }
+
+        .destination small {
+            display: block;
+            margin-top: 2px;
+            font-size: .78rem;
+            font-weight: 400;
+            opacity: .6;
+        }
+
+        .highlight {
+            font-weight: 700;
+        }
+
+        .subtle {
+            font-size: .85rem;
+            opacity: .7;
+        }
+
+        .country-section {
+            margin-top: 45px;
+        }
+
+        .country-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .item-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .item {
+            padding: 13px 15px;
+            border: 1px solid rgba(127,127,127,.18);
+            border-radius: 8px;
+            background: rgba(127,127,127,.04);
+        }
+
+        .item strong {
+            display: block;
+        }
+
+        .item small {
+            opacity: .6;
+        }
+
+        .sources {
+            margin-top: 50px;
+        }
+
+        @media (max-width: 700px) {
+            .travel-page {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -37,879 +145,466 @@
         <p class="site-name">Torn City France</p>
 
         <nav aria-label="Navigation principale">
-
-            <a href="index.html">
-                Accueil
-            </a>
-
-            <a href="guide-debutant.html">
-                Débuter
-            </a>
-
-            <a href="gagner-argent.html">
-                Argent
-            </a>
-
-            <a
-                href="voyages.html"
-                aria-current="page"
-            >
-                Voyages
-            </a>
-
-            <a href="statistiques.html">
-                Statistiques
-            </a>
-
-            <a href="factions.html">
-                Factions
-            </a>
-
+            <a href="index.html">Accueil</a>
+            <a href="guide-debutant.html">Débuter</a>
+            <a href="gagner-argent.html">Gagner de l'argent</a>
+            <a href="voyages.html" aria-current="page">Voyages</a>
+            <a href="fleurs-peluches.html">Fleurs &amp; peluches</a>
+            <a href="contrebande.html">Contrebande</a>
         </nav>
 
     </div>
 </header>
 
 
-<main>
+<main class="travel-page">
 
-<section class="hero">
+    <header class="intro">
 
-    <div class="container">
+        <p class="eyebrow">GUIDE TORN CITY</p>
 
-        <p class="eyebrow">
-            GUIDE VOYAGES — 2026
+        <h1>Voyager dans Torn City</h1>
+
+        <p>
+            À partir du <strong>niveau 15</strong>, tu peux utiliser
+            l'agence de voyage du City Center pour partir à l'étranger.
+            Chaque destination possède ses propres objets.
         </p>
 
-        <h1>
-            Voyager dans Torn City
-        </h1>
+        <div class="notice">
+            <strong>💡 Pourquoi voyager ?</strong><br>
+            Les voyages permettent notamment d'acheter à l'étranger
+            des fleurs, des peluches et d'autres objets qui peuvent
+            être revendus sur le marché de Torn.
+        </div>
 
-        <p class="intro">
-            Les voyages sont l'une des principales activités économiques
-            de Torn. À partir du niveau 15, tu peux utiliser l'agence
-            de voyages pour te rendre dans différentes destinations
-            et rapporter des objets à Torn.
+        <div class="notice">
+            <strong>⚠️ Attention aux temps de vol</strong><br>
+            Le temps affiché peut légèrement varier. Le Wiki officiel
+            indique une variation d'environ <strong>3 %</strong> sur
+            les temps de vol.
+        </div>
+
+    </header>
+
+
+    <section>
+
+        <h2>🌍 Les 11 destinations</h2>
+
+        <p class="subtle">
+            Temps indiqués pour un trajet aller simple, sans le livre
+            <em>Mailing Yourself Abroad</em>.
+        </p>
+
+        <div class="travel-table-wrap">
+
+            <table class="travel-table">
+
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th class="number">Standard</th>
+                        <th class="number">Airstrip</th>
+                        <th class="number">WLT</th>
+                        <th class="number">Business</th>
+                        <th class="number">Prix</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="destination">
+                            🇲🇽 Mexique
+                            <small>Ciudad Juárez</small>
+                        </td>
+                        <td class="number">24 min</td>
+                        <td class="number">17 min</td>
+                        <td class="number">12 min</td>
+                        <td class="number">7 min</td>
+                        <td class="number">$6 500</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇰🇾 Îles Caïmans
+                            <small>George Town</small>
+                        </td>
+                        <td class="number">33 min</td>
+                        <td class="number">23 min</td>
+                        <td class="number">17 min</td>
+                        <td class="number">10 min</td>
+                        <td class="number">$10 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇨🇦 Canada
+                            <small>Toronto</small>
+                        </td>
+                        <td class="number">39 min</td>
+                        <td class="number">27 min</td>
+                        <td class="number">19 min</td>
+                        <td class="number">12 min</td>
+                        <td class="number">$9 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇺🇸 Hawaï
+                            <small>Honolulu</small>
+                        </td>
+                        <td class="number">2 h 07</td>
+                        <td class="number">1 h 29</td>
+                        <td class="number">1 h 03</td>
+                        <td class="number">38 min</td>
+                        <td class="number">$11 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇬🇧 Royaume-Uni
+                            <small>Londres</small>
+                        </td>
+                        <td class="number">2 h 31</td>
+                        <td class="number">1 h 46</td>
+                        <td class="number">1 h 15</td>
+                        <td class="number">45 min</td>
+                        <td class="number">$18 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇦🇷 Argentine
+                            <small>Buenos Aires</small>
+                        </td>
+                        <td class="number">2 h 38</td>
+                        <td class="number">1 h 51</td>
+                        <td class="number">1 h 19</td>
+                        <td class="number">47 min</td>
+                        <td class="number">$21 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇨🇭 Suisse
+                            <small>Zurich</small>
+                        </td>
+                        <td class="number">2 h 46</td>
+                        <td class="number">1 h 56</td>
+                        <td class="number">1 h 23</td>
+                        <td class="number">50 min</td>
+                        <td class="number">$27 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇯🇵 Japon
+                            <small>Tokyo</small>
+                        </td>
+                        <td class="number">3 h 33</td>
+                        <td class="number">2 h 29</td>
+                        <td class="number">1 h 47</td>
+                        <td class="number">1 h 04</td>
+                        <td class="number">$32 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇨🇳 Chine
+                            <small>Pékin</small>
+                        </td>
+                        <td class="number">3 h 49</td>
+                        <td class="number">2 h 40</td>
+                        <td class="number">1 h 54</td>
+                        <td class="number">1 h 09</td>
+                        <td class="number">$35 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇦🇪 Émirats arabes unis
+                            <small>Dubaï</small>
+                        </td>
+                        <td class="number">4 h 17</td>
+                        <td class="number">3 h 00</td>
+                        <td class="number">2 h 08</td>
+                        <td class="number">1 h 17</td>
+                        <td class="number">$32 000</td>
+                    </tr>
+
+                    <tr>
+                        <td class="destination">
+                            🇿🇦 Afrique du Sud
+                            <small>Johannesburg</small>
+                        </td>
+                        <td class="number">4 h 42</td>
+                        <td class="number">3 h 17</td>
+                        <td class="number">2 h 21</td>
+                        <td class="number">1 h 25</td>
+                        <td class="number">$40 000</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="country-section">
+
+        <h2>🧸 Que rapporter ?</h2>
+
+        <p>
+            Chaque destination possède des objets exclusifs.
+            Les fleurs et les peluches sont particulièrement
+            recherchées par les joueurs et peuvent être revendues
+            sur le marché.
+        </p>
+
+        <div class="item-list">
+
+            <div class="item">
+                <strong>🇲🇽 Mexique</strong>
+                <small>Jaguar — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Dahlia — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇰🇾 Îles Caïmans</strong>
+                <small>Stingray — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Banana Orchid — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇨🇦 Canada</strong>
+                <small>Wolverine — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Crocus — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇺🇸 Hawaï</strong>
+                <small>Orchid — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇬🇧 Royaume-Uni</strong>
+                <small>Nessie / Red Fox — Peluches <em>(Plushies)</em></small>
+                <br>
+                <small>Heather — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇦🇷 Argentine</strong>
+                <small>Monkey — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Ceibo — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇨🇭 Suisse</strong>
+                <small>Chamois — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Edelweiss — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇯🇵 Japon</strong>
+                <small>Cherry Blossom — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇨🇳 Chine</strong>
+                <small>Panda — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Peony — Fleur <em>(Flower)</em></small>
+                <br>
+                <small>Pangolin Scales — Contrebande</small>
+            </div>
+
+            <div class="item">
+                <strong>🇦🇪 Émirats arabes unis</strong>
+                <small>Camel — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>Tribulus Omanense — Fleur <em>(Flower)</em></small>
+            </div>
+
+            <div class="item">
+                <strong>🇿🇦 Afrique du Sud</strong>
+                <small>Lion — Peluche <em>(Plushie)</em></small>
+                <br>
+                <small>African Violet — Fleur <em>(Flower)</em></small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="country-section">
+
+        <h2>💰 Voyager pour gagner de l'argent</h2>
+
+        <p>
+            La rentabilité d'un voyage dépend du prix actuel des objets
+            sur le marché, du nombre d'objets que tu peux transporter,
+            du coût du voyage et surtout du temps passé dans les airs.
+        </p>
+
+        <div class="notice">
+
+            <strong>Ne cherche pas forcément le plus gros bénéfice par voyage.</strong>
+
+            <p>
+                Une destination très rentable par objet peut être moins
+                intéressante sur une longue période si le trajet est beaucoup
+                plus long.
+            </p>
+
+            <p>
+                Compare plutôt le bénéfice potentiel avec le temps total
+                nécessaire pour effectuer tes voyages.
+            </p>
+
+        </div>
+
+        <p>
+            Pour les fleurs et les peluches, les prix du marché peuvent
+            changer. Il n'existe donc pas une destination définitivement
+            meilleure que toutes les autres.
+        </p>
+
+    </section>
+
+
+    <section class="country-section">
+
+        <h2>✈️ Réduire le temps de voyage</h2>
+
+        <ul>
+            <li>
+                <strong>Airstrip</strong> :
+                réduit le temps de vol.
+            </li>
+
+            <li>
+                <strong>WLT</strong> :
+                permet de voyager gratuitement et réduit davantage
+                le temps de trajet.
+            </li>
+
+            <li>
+                <strong>Business Class Ticket</strong> :
+                réduit fortement le temps de vol.
+            </li>
+
+            <li>
+                <strong>Mailing Yourself Abroad</strong> :
+                le livre réduit encore le temps de voyage pendant
+                sa durée d'effet.
+            </li>
+        </ul>
+
+        <p class="subtle">
+            Les réductions de temps sont détaillées dans le tableau
+            ci-dessus. Les vols WLT sont gratuits.
+        </p>
+
+    </section>
+
+
+    <section class="country-section">
+
+        <h2>📦 À savoir avant de partir</h2>
+
+        <ul>
+            <li>
+                Les stocks des magasins étrangers sont limités
+                et sont réapprovisionnés périodiquement.
+            </li>
+
+            <li>
+                Une fois à l'étranger, tu ne peux pas accéder
+                à ton inventaire.
+            </li>
+
+            <li>
+                Pendant un voyage actif, tu ne peux pas être attaqué.
+            </li>
+
+            <li>
+                Les armes et armures ne peuvent actuellement plus
+                être emportées dans les vols au départ de Torn,
+                depuis la mise à jour du 23 juin 2026.
+            </li>
+
+            <li>
+                Il existe une courte période de grâce après l'arrivée
+                pendant laquelle tu ne peux pas être attaqué.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <section class="sources">
+
+        <h2>Sources</h2>
+
+        <ul>
+            <li>
+                <a href="https://wiki.torn.com/wiki/Travel"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel de Torn — Travel
+                </a>
+            </li>
+
+            <li>
+                <a href="https://wiki.torn.com/wiki/Flower"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel de Torn — Flowers
+                </a>
+            </li>
+
+            <li>
+                Guides et travaux de joueurs vétérans,
+                notamment Baldr.
+            </li>
+        </ul>
+
+        <p>
+            Guide français maintenu par <strong>DurkSkull</strong>.
+        </p>
+
+    </section>
+
+
+    <section class="referral">
+
+        <h2>🎮 Commencer Torn</h2>
+
+        <p>
+            Tu souhaites découvrir Torn City ?
         </p>
 
         <p>
-            Fleurs, peluches, objets de contrebande ou simplement
-            déplacements utiles : voici les bases à connaître avant
-            de prendre l'avion.
+            <a href="https://www.torn.com/4227770"
+               target="_blank"
+               rel="noopener noreferrer">
+                Rejoindre Torn City
+            </a>
         </p>
 
-    </div>
-
-</section>
-
-
-<section class="content">
-
-<div class="container">
-
-
-<h2>✈️ Débloquer les voyages</h2>
-
-<div class="card">
-
-    <p>
-        L'agence de voyages
-        <small>(Travel Agency)</small>
-        est débloquée au
-        <strong>niveau 15</strong>.
-    </p>
-
-    <p>
-        C'est pourquoi atteindre le niveau 15 constitue l'un des
-        premiers grands objectifs d'un nouveau joueur.
-    </p>
-
-    <p>
-        Une fois ce niveau atteint, tu peux voyager vers les différentes
-        destinations disponibles depuis Torn.
-    </p>
-
-</div>
-
-
-<h2>🌍 Les destinations</h2>
-
-<p>
-    Les destinations disponibles permettent notamment d'acheter
-    des objets spécifiques à chaque pays.
-</p>
-
-<p>
-    Les temps et coûts ci-dessous correspondent au voyage standard.
-    Certains avantages peuvent réduire fortement la durée du trajet
-    ou modifier son coût.
-</p>
-
-
-<div class="card">
-
-    <h3>🇲🇽 Mexique</h3>
-
-    <p>
-        Ville : <strong>Ciudad Juárez</strong>
-    </p>
-
-    <p>
-        Voyage standard :
-        <strong>26 minutes</strong>
-    </p>
-
-    <p>
-        Coût :
-        <strong>6 500 $</strong>
-    </p>
-
-    <p>
-        Le Mexique est notamment connu pour ses fleurs.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇨🇦 Canada</h3>
-
-    <p>
-        Ville : <strong>Toronto</strong>
-    </p>
-
-    <p>
-        Voyage standard :
-        <strong>41 minutes</strong>
-    </p>
-
-    <p>
-        Coût :
-        <strong>9 000 $</strong>
-    </p>
-
-    <p>
-        Le Canada propose notamment certaines fleurs et des objets
-        de contrebande.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇬🇧 Royaume-Uni</h3>
-
-    <p>
-        Ville : <strong>Londres</strong>
-    </p>
-
-    <p>
-        Voyage standard :
-        <strong>2 h 31</strong>
-    </p>
-
-    <p>
-        Coût :
-        <strong>18 000 $</strong>
-    </p>
-
-    <p>
-        Le Royaume-Uni est notamment une destination intéressante
-        pour certaines marchandises et objets de contrebande.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇨🇭 Suisse</h3>
-
-    <p>
-        Ville : <strong>Zurich</strong>
-    </p>
-
-    <p>
-        Voyage standard :
-        <strong>2 h 46</strong>
-    </p>
-
-    <p>
-        Coût :
-        <strong>27 000 $</strong>
-    </p>
-
-    <p>
-        La Suisse est notamment connue pour certaines fleurs et
-        plusieurs objets de contrebande.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇦🇪 Émirats arabes unis</h3>
-
-    <p>
-        Destination :
-        <strong>Abou Dabi</strong>
-    </p>
-
-    <p>
-        Cette destination fait partie des voyages les plus longs
-        disponibles.
-    </p>
-
-    <p>
-        Elle est notamment intéressante pour certaines marchandises
-        de grande valeur.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇿🇦 Afrique du Sud</h3>
-
-    <p>
-        Destination :
-        <strong>Johannesburg</strong>
-    </p>
-
-    <p>
-        L'Afrique du Sud fait partie des destinations importantes
-        pour le commerce de certaines marchandises.
-    </p>
-
-    <p>
-        On y trouve notamment l'ivoire brut
-        <small>(Raw Ivory)</small>
-        et des diamants non taillés
-        <small>(Uncut Diamond)</small>.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇭🇼 Hawaï</h3>
-
-    <p>
-        Hawaï est une destination particulièrement connue des joueurs
-        qui voyagent pour acheter des objets.
-    </p>
-
-    <p>
-        On y trouve notamment l'aileron de requin
-        <small>(Shark Fin)</small>
-        et la carapace de tortue
-        <small>(Turtle Shell)</small>.
-    </p>
-
-    <p>
-        Le coût du voyage standard est de
-        <strong>11 000 $</strong>.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇯🇵 Japon</h3>
-
-    <p>
-        Ville :
-        <strong>Tokyo</strong>
-    </p>
-
-    <p>
-        Voyage standard :
-        <strong>3 h 33</strong>
-    </p>
-
-    <p>
-        Coût :
-        <strong>32 000 $</strong>
-    </p>
-
-    <p>
-        Le Japon est notamment connu pour certaines fleurs,
-        peluches et marchandises de contrebande.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇨🇳 Chine</h3>
-
-    <p>
-        Ville :
-        <strong>Pékin</strong>
-    </p>
-
-    <p>
-        Voyage standard :
-        <strong>3 h 49</strong>
-    </p>
-
-    <p>
-        Coût :
-        <strong>35 000 $</strong>
-    </p>
-
-    <p>
-        La Chine est notamment intéressante pour certaines fleurs
-        et peluches.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇦🇷 Argentine</h3>
-
-    <p>
-        L'Argentine fait partie des destinations lointaines.
-    </p>
-
-    <p>
-        Elle propose notamment certaines marchandises et objets
-        de contrebande.
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>🇰🇾 Îles Caïmans</h3>
-
-    <p>
-        Les Îles Caïmans constituent une destination particulière
-        dans le système de voyage de Torn.
-    </p>
-
-    <p>
-        Elles sont également liées au système bancaire offshore
-        <small>(Offshore Banking)</small>.
-    </p>
-
-</div>
-
-
-<h2>🎒 La capacité de transport</h2>
-
-<p>
-    Voyager ne sert pas uniquement à atteindre une destination :
-    la quantité d'objets que tu peux rapporter est extrêmement
-    importante lorsque tu cherches à gagner de l'argent.
-</p>
-
-<p>
-    Ta capacité de transport détermine directement le nombre
-    d'objets que tu peux ramener à Torn.
-</p>
-
-
-<div class="card">
-
-    <h3>🧳 Les valises</h3>
-
-    <p>
-        Les valises augmentent ta capacité de transport.
-    </p>
-
-    <ul>
-
-        <li>
-            Petite valise
-            <small>(Small Suitcase)</small>
-            : <strong>+1</strong>
-        </li>
-
-        <li>
-            Valise moyenne
-            <small>(Medium Suitcase)</small>
-            : <strong>+2</strong>
-        </li>
-
-        <li>
-            Grande valise
-            <small>(Large Suitcase)</small>
-            : <strong>+3</strong>
-        </li>
-
-    </ul>
-
-    <p>
-        Les valises ne se cumulent pas entre elles.
-        Seule la plus avantageuse est prise en compte.
-    </p>
-
-</div>
-
-
-<h2>🏴‍☠️ La faction peut aussi aider</h2>
-
-<p>
-    Certaines améliorations de faction permettent d'augmenter
-    directement la capacité de transport.
-</p>
-
-<p>
-    L'arbre
-    <strong>Excursion</strong>
-    permet notamment d'obtenir jusqu'à
-    <strong>+10 de capacité de transport</strong>.
-</p>
-
-<p>
-    Il peut également réduire les frais de voyage.
-</p>
-
-
-<h2>⚡ Réduire le temps de voyage</h2>
-
-<p>
-    Pour un joueur qui voyage régulièrement, le temps passé dans
-    l'avion devient une ressource à part entière.
-</p>
-
-
-<div class="cards">
-
-    <article class="card">
-
-        <h3>
-            🛬 Piste d'atterrissage
-            <small>(Airstrip)</small>
-        </h3>
-
-        <p>
-            Une piste d'atterrissage installée sur une propriété
-            permet de réduire le temps de vol et peut supprimer
-            le coût du voyage.
-        </p>
-
-    </article>
-
-
-    <article class="card">
-
-        <h3>
-            📈 Avantage WLT
-            <small>(WLT Stock Benefit)</small>
-        </h3>
-
-        <p>
-            L'avantage lié à l'action WLT réduit également le temps
-            nécessaire aux voyages et augmente la capacité de transport.
-        </p>
-
-    </article>
-
-
-    <article class="card">
-
-        <h3>
-            💺 Billet classe affaires
-            <small>(Business Class Ticket)</small>
-        </h3>
-
-        <p>
-            Un billet classe affaires réduit la durée du voyage
-            de <strong>70 %</strong> et fournit une capacité de base
-            de <strong>15 objets</strong>.
-        </p>
-
-        <p>
-            Il s'agit d'un avantage particulièrement intéressant
-            pour les voyageurs réguliers.
-        </p>
-
-    </article>
-
-</div>
-
-
-<h2>💰 Voyager pour gagner de l'argent</h2>
-
-<p>
-    Les voyages peuvent devenir une véritable activité économique.
-</p>
-
-<p>
-    Le principe consiste généralement à acheter un objet dans son pays
-    d'origine puis à le revendre à Torn.
-</p>
-
-
-<div class="card">
-
-    <h3>🌸 Fleurs</h3>
-
-    <p>
-        Les fleurs sont achetées dans différents pays puis revendues
-        à des joueurs à Torn.
-    </p>
-
-    <p>
-        Leur prix de vente dépend du marché.
-    </p>
-
-    <p>
-        <a href="fleurs-peluches.html">
-            Voir le guide des fleurs et peluches →
-        </a>
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>
-        🧸 Peluches
-        <small>(Plushies)</small>
-    </h3>
-
-    <p>
-        Les peluches sont également achetées à l'étranger puis
-        revendues à des joueurs.
-    </p>
-
-    <p>
-        Certaines peluches sont particulièrement recherchées
-        et peuvent offrir une bonne marge.
-    </p>
-
-    <p>
-        <a href="fleurs-peluches.html">
-            Voir le guide des fleurs et peluches →
-        </a>
-    </p>
-
-</div>
-
-
-<div class="card">
-
-    <h3>
-        ☠️ Contrebande
-        <small>(Contraband)</small>
-    </h3>
-
-    <p>
-        La contrebande regroupe des objets non liés aux drogues,
-        vendus sur les marchés noirs
-        <small>(Black Markets)</small>
-        à l'étranger.
-    </p>
-
-    <p>
-        Leur prix d'achat varie plusieurs fois au cours de la journée.
-        Il faut donc vérifier le prix actuel avant d'acheter.
-    </p>
-
-    <p>
-        <a href="gagner-argent.html">
-            Voir le guide pour gagner de l'argent →
-        </a>
-    </p>
-
-</div>
-
-
-<h2>🧮 La rentabilité d'un voyage</h2>
-
-<p>
-    Un voyage rentable ne dépend pas uniquement du prix de vente
-    d'un objet.
-</p>
-
-<p>
-    Il faut prendre en compte :
-</p>
-
-<ul>
-
-    <li>
-        le prix d'achat ;
-    </li>
-
-    <li>
-        le prix de vente réel ;
-    </li>
-
-    <li>
-        le nombre d'objets transportables ;
-    </li>
-
-    <li>
-        le coût du voyage ;
-    </li>
-
-    <li>
-        la durée totale du voyage ;
-    </li>
-
-    <li>
-        les éventuels prérequis nécessaires pour revendre l'objet.
-    </li>
-
-</ul>
-
-
-<div class="card">
-
-    <h3>
-        📌 Exemple
-    </h3>
-
-    <p>
-        Un objet acheté 20 000 $ et revendu 60 000 $ semble
-        rapporter 40 000 $.
-    </p>
-
-    <p>
-        Mais si tu ne peux en transporter que 10, ton bénéfice
-        potentiel est très différent d'un objet rapportant 30 000 $
-        mais pouvant être transporté en grande quantité.
-    </p>
-
-    <p>
-        Il faut donc toujours regarder le
-        <strong>
-            bénéfice par emplacement
-        </strong>.
-    </p>
-
-</div>
-
-
-<h2>⚠️ Attention aux objets nécessitant un déblocage</h2>
-
-<p>
-    Certains objets de contrebande semblent extrêmement rentables
-    mais ne peuvent pas forcément être revendus immédiatement
-    par ton personnage.
-</p>
-
-<div class="card">
-
-    <h3>
-        🦈 Aileron de requin
-        <small>(Shark Fin)</small>
-    </h3>
-
-    <p>
-        L'aileron de requin est disponible à Hawaï.
-    </p>
-
-    <p>
-        Il peut être acheté à partir d'environ
-        <strong>20 200 $</strong>,
-        avec un prix variable pouvant atteindre environ
-        <strong>21 892 $</strong>.
-    </p>
-
-    <p>
-        Sa revente à Nikeh Performance nécessite cependant
-        le déblocage correspondant.
-    </p>
-
-    <p>
-        Ne pars donc pas acheter une cargaison entière avant
-        d'avoir vérifié que tu peux effectivement la revendre.
-    </p>
-
-</div>
-
-
-<h2>📊 Les prix ne sont pas figés</h2>
-
-<p>
-    C'est particulièrement important pour la contrebande.
-</p>
-
-<p>
-    Les prix d'achat des objets de contrebande peuvent changer
-    plusieurs fois par jour.
-</p>
-
-<p>
-    Les chiffres affichés dans un guide sont donc utiles pour
-    comprendre les ordres de grandeur, mais ils ne doivent pas
-    remplacer une vérification en jeu au moment du voyage.
-</p>
-
-
-<h2>🧠 Les conseils d'un voyageur</h2>
-
-<div class="card">
-
-    <ol>
-
-        <li>
-            Atteins le niveau 15.
-        </li>
-
-        <li>
-            Commence par comprendre les destinations et leurs
-            marchandises.
-        </li>
-
-        <li>
-            Augmente progressivement ta capacité de transport.
-        </li>
-
-        <li>
-            Vérifie les prix avant chaque départ.
-        </li>
-
-        <li>
-            Ne dépense pas tout ton capital dans une seule cargaison.
-        </li>
-
-        <li>
-            Vérifie les prérequis des vendeurs avant d'acheter.
-        </li>
-
-        <li>
-            Compare le bénéfice par emplacement et le bénéfice
-            par temps de voyage.
-        </li>
-
-    </ol>
-
-</div>
-
-
-<h2>📚 Sources</h2>
-
-<p>
-    Cette page est une synthèse rédigée en français pour les joueurs
-    de Torn. Les données de voyage et les mécaniques sont vérifiées
-    à partir des ressources de la communauté et du Wiki officiel.
-</p>
-
-<ul>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Travel"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Voyages
-            <small>(Travel)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Contraband"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Contrebande
-            <small>(Contraband)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Level_and_Ranks"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Niveaux et rangs
-            <small>(Level and Ranks)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Perks"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Avantages
-            <small>(Perks)</small>
-        </a>
-    </li>
-
-    <li>
-        Guides et conseils de
-        <strong>Baldr</strong>,
-        joueur vétéran de Torn.
-    </li>
-
-</ul>
-
-
-<div class="card">
-
-    <h3>
-        ✍️ À propos de ce guide
-    </h3>
-
-    <p>
-        Guide rédigé et adapté en français par
-        <strong>DurkSkull</strong>,
-        avec l'aide des ressources de la communauté Torn.
-    </p>
-
-    <p class="small">
-        Dernière vérification : août 2026.
-    </p>
-
-</div>
-
-
-<section class="referral">
-
-    <h2>
-        🎮 Tu veux commencer Torn ?
-    </h2>
-
-    <p>
-        Si ce guide t'a été utile et que tu souhaites découvrir Torn,
-        tu peux commencer ton aventure avec mon lien de parrainage.
-    </p>
-
-    <p>
-
-        <a
-            class="button"
-            href="https://www.torn.com/4227770"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Rejoindre Torn
-        </a>
-
-    </p>
-
-    <p class="small">
-        Ce lien est un lien de parrainage personnel.
-    </p>
-
-</section>
-
-
-</div>
-
-</section>
+    </section>
 
 </main>
 
@@ -919,11 +614,11 @@
     <div class="container">
 
         <p>
-            Torn City France — Guide indépendant consacré à Torn City.
+            Torn City France — Guide indépendant.
         </p>
 
         <p class="small">
-            Ce site n'est pas le site officiel de Torn.
+            Ce site n'est pas affilié officiellement à Torn City.
         </p>
 
     </div>
