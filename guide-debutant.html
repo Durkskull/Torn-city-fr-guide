@@ -1,43 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+    <title>Guide débutant Torn City — Bien commencer</title>
 
-    <meta
-        name="description"
-        content="Guide français de Torn City pour débutants : premières étapes, niveau 15, entraînement, argent, voyages et progression."
-    >
+    <meta name="description"
+          content="Guide français pour bien commencer sur Torn City : missions, entraînement, travail, éducation, argent, voyages et erreurs à éviter.">
 
-    <meta
-        name="robots"
-        content="index, follow, max-image-preview:large"
-    >
+    <meta name="robots" content="index, follow">
 
-    <meta
-        name="referrer"
-        content="strict-origin-when-cross-origin"
-    >
-
-    <meta
-        http-equiv="Content-Security-Policy"
-        content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self'; style-src 'self'; script-src 'none'; connect-src 'none';"
-    >
-
-    <link
-        rel="canonical"
-        href="https://durkskull.github.io/Torn-city-fr-guide/guide-debutant.html"
-    >
-
-    <title>
-        Torn City : guide du débutant 2026 | Torn City France
-    </title>
+    <link rel="canonical"
+          href="https://durkskull.github.io/Torn-city-fr-guide/guide-debutant.html">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .beginner-page {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px 60px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .notice {
+            margin: 25px 0;
+            padding: 16px 18px;
+            border-left: 4px solid currentColor;
+            background: rgba(127,127,127,.08);
+            border-radius: 7px;
+        }
+
+        .guide-section {
+            margin-top: 45px;
+        }
+
+        .guide-section h2 {
+            margin-bottom: 12px;
+        }
+
+        .guide-section h3 {
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        .steps {
+            counter-reset: guide-step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: guide-step;
+            position: relative;
+            padding: 15px 18px 15px 55px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(127,127,127,.18);
+            border-radius: 8px;
+            background: rgba(127,127,127,.04);
+        }
+
+        .steps li::before {
+            content: counter(guide-step);
+            position: absolute;
+            left: 17px;
+            top: 14px;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(127,127,127,.15);
+            font-weight: 700;
+        }
+
+        .tip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .tip {
+            padding: 16px;
+            border: 1px solid rgba(127,127,127,.18);
+            border-radius: 8px;
+            background: rgba(127,127,127,.04);
+        }
+
+        .tip strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .warning {
+            border-left-color: #c98a00;
+        }
+
+        .success {
+            border-left-color: #238636;
+        }
+
+        .danger {
+            border-left-color: #c0392b;
+        }
+
+        .small {
+            font-size: .88rem;
+            opacity: .7;
+        }
+
+        .sources {
+            margin-top: 55px;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,417 +131,644 @@
 
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
-            <a
-                href="guide-debutant.html"
-                aria-current="page"
-            >
-                Débuter
-            </a>
-            <a href="gagner-argent.html">Argent</a>
+            <a href="guide-debutant.html" aria-current="page">Débuter</a>
+            <a href="gagner-argent.html">Gagner de l'argent</a>
             <a href="voyages.html">Voyages</a>
-            <a href="statistiques.html">Statistiques</a>
-            <a href="factions.html">Factions</a>
+            <a href="fleurs-peluches.html">Fleurs &amp; peluches</a>
+            <a href="contrebande.html">Contrebande</a>
         </nav>
 
     </div>
 </header>
 
 
-<main>
+<main class="beginner-page">
 
-<section class="hero">
-    <div class="container">
+    <header class="intro">
 
-        <p class="eyebrow">GUIDE DÉBUTANT — 2026</p>
+        <p class="eyebrow">GUIDE TORN CITY</p>
 
-        <h1>
-            Torn City : guide du débutant
-        </h1>
+        <h1>Bien commencer sur Torn City</h1>
 
-        <p class="intro">
+        <p>
             Tu viens de commencer Torn et tu ne sais pas vraiment
-            quoi faire ? Voici une feuille de route simple pour
-            comprendre les bases et atteindre ton premier gros
-            objectif : le niveau 15.
+            quoi faire ? Voici une route simple pour comprendre les
+            bases sans essayer de tout apprendre en une journée.
         </p>
+
+        <div class="notice success">
+            <strong>🎯 Premier objectif : atteindre le niveau 15.</strong>
+
+            <p>
+                Le niveau 15 débloque notamment l'agence de voyage.
+                C'est une étape importante pour accéder à une grosse
+                partie de l'économie de Torn. :contentReference[oaicite:1]{index=1}
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- PREMIERS PAS -->
+
+    <section class="guide-section">
+
+        <h2>🚀 Tes premières heures</h2>
 
         <p>
-            <a
-                class="button"
-                href="https://www.torn.com/4227770"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Commencer Torn
-            </a>
+            Ne cherche pas immédiatement à optimiser chaque dollar.
+            Commence par comprendre les systèmes principaux du jeu.
         </p>
 
-    </div>
-</section>
+        <ol class="steps">
+
+            <li>
+                <strong>Termine les missions pour débutants.</strong>
+
+                <p>
+                    Elles servent de tutoriel et te font découvrir
+                    progressivement la maison, le gym, le travail,
+                    l'éducation et plusieurs fonctionnalités importantes.
+                </p>
+
+                <p class="small">
+                    Les missions de nouveau joueur sont prévues
+                    précisément pour accompagner les premières étapes.
+                </p>
+            </li>
+
+            <li>
+                <strong>Entraîne-toi au gym.</strong>
+
+                <p>
+                    Utilise ton énergie pour développer tes statistiques
+                    de combat. Même avec de petites statistiques,
+                    prendre l'habitude de dépenser ton énergie
+                    régulièrement est important.
+                </p>
+            </li>
+
+            <li>
+                <strong>Trouve un travail.</strong>
+
+                <p>
+                    Un travail permet notamment de développer tes
+                    statistiques professionnelles et certaines activités
+                    donnent également de l'expérience.
+                </p>
+            </li>
+
+            <li>
+                <strong>Commence une formation.</strong>
+
+                <p>
+                    L'éducation apporte des bonus utiles dans de nombreux
+                    domaines du jeu. Certaines formations nécessitent
+                    d'autres cours avant d'être accessibles.
+                </p>
+
+            </li>
+
+            <li>
+                <strong>Apprends à gérer ton argent.</strong>
+
+                <p>
+                    Au début, évite de dépenser ton argent dans n'importe
+                    quoi. Garde une réserve pour les dépenses utiles
+                    et les opportunités.
+                </p>
+            </li>
+
+        </ol>
+
+    </section>
 
 
-<section class="content">
-    <div class="container">
+    <!-- NIVEAU 15 -->
 
-        <h2>🚀 La version courte</h2>
+    <section class="guide-section">
 
-        <div class="card">
+        <h2>⭐ Pourquoi viser le niveau 15 ?</h2>
+
+        <p>
+            Le niveau 15 débloque l'agence de voyage.
+            À partir de là, tu peux partir à l'étranger et accéder
+            aux objets propres à chaque destination. :contentReference[oaicite:2]{index=2}
+        </p>
+
+        <div class="notice">
+
+            <strong>✈️ Les voyages changent complètement l'économie du débutant.</strong>
 
             <p>
-                Si tu veux simplement savoir quoi faire sans lire
-                tout le guide :
+                Les destinations étrangères possèdent notamment des
+                fleurs, des peluches et différents objets qui peuvent
+                être revendus à d'autres joueurs.
             </p>
 
-            <ol>
-                <li>Fais les missions proposées aux nouveaux joueurs.</li>
-                <li>Utilise ton énergie pour entraîner tes statistiques.</li>
-                <li>Fais régulièrement tes crimes.</li>
-                <li>Profite de ton travail et de ton éducation.</li>
-                <li>Progresse jusqu'au niveau 15.</li>
-                <li>Une fois niveau 15, commence à explorer les voyages.</li>
-            </ol>
+            <p>
+                Certaines destinations proposent également des objets
+                de contrebande avec des possibilités de bénéfice
+                particulières.
+            </p>
 
             <p>
-                <strong>
-                    Ne cherche pas à tout comprendre dès le premier jour.
-                </strong>
-                Torn est un jeu qui se découvre progressivement.
+                👉 Consulte le
+                <a href="voyages.html">guide des voyages</a>
+                lorsque tu atteins le niveau 15.
             </p>
 
         </div>
 
+    </section>
 
-        <h2>🧭 1. Bien commencer à Torn</h2>
+
+    <!-- ENTRAINEMENT -->
+
+    <section class="guide-section">
+
+        <h2>🏋️ Les statistiques de combat</h2>
 
         <p>
-            Torn peut sembler particulièrement compliqué lorsque l'on
-            arrive pour la première fois. Il existe énormément de
-            fonctionnalités et beaucoup de choses ne sont pas
-            expliquées immédiatement.
+            Ton personnage possède quatre statistiques principales :
         </p>
 
-        <p>
-            La première chose à faire est donc simplement de suivre
-            les missions destinées aux nouveaux joueurs. Elles
-            servent de tutoriel et permettent notamment de découvrir
-            l'entraînement, le travail, l'éducation, les combats et
-            différentes parties de la ville.
-        </p>
+        <div class="tip-grid">
+
+            <div class="tip">
+                <strong>💪 Force</strong>
+                Augmente ta capacité à infliger des dégâts.
+            </div>
+
+            <div class="tip">
+                <strong>🛡️ Défense</strong>
+                Améliore ta capacité à encaisser les attaques.
+            </div>
+
+            <div class="tip">
+                <strong>⚡ Vitesse</strong>
+                Influence ta capacité à toucher et esquiver.
+            </div>
+
+            <div class="tip">
+                <strong>🎯 Dextérité</strong>
+                Améliore notamment ta capacité à éviter les attaques.
+            </div>
+
+        </div>
+
+        <div class="notice">
+
+            <strong>Conseil débutant</strong>
+
+            <p>
+                Ne change pas constamment de stratégie parce qu'un joueur
+                te dit que telle statistique est « meilleure ».
+                Ton entraînement dépend de ton objectif à long terme.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="guide-section">
+
+        <h2>🎓 L'éducation</h2>
 
         <p>
-            <a
-                href="https://wiki.torn.com/wiki/New_Player_Missions"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Voir les missions des nouveaux joueurs sur le Wiki officiel
+            L'éducation est une partie importante de la progression.
+            Les cours peuvent améliorer différents aspects du jeu et
+            certains nécessitent d'avoir terminé d'autres formations. :contentReference[oaicite:3]{index=3}
+        </p>
+
+        <div class="notice success">
+
+            <strong>À retenir</strong>
+
+            <p>
+                Ne laisse pas ton emplacement d'éducation inutilisé
+                pendant de longues périodes. Une formation terminée
+                continue généralement à apporter ses bénéfices.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARGENT -->
+
+    <section class="guide-section">
+
+        <h2>💰 Gagner ses premiers dollars</h2>
+
+        <p>
+            Au début, ton objectif n'est pas de devenir immédiatement
+            riche. Il faut surtout créer des habitudes qui te permettront
+            de faire grossir progressivement ton capital.
+        </p>
+
+        <div class="tip-grid">
+
+            <div class="tip">
+                <strong>🏋️ Utilise ton énergie</strong>
+                Entraîne-toi régulièrement plutôt que de laisser ton
+                énergie atteindre sa limite.
+            </div>
+
+            <div class="tip">
+                <strong>💼 Travaille</strong>
+                Les statistiques professionnelles deviennent utiles
+                avec le temps.
+            </div>
+
+            <div class="tip">
+                <strong>🕵️ Fais tes crimes</strong>
+                Les crimes participent également à la progression
+                de ton personnage.
+            </div>
+
+            <div class="tip">
+                <strong>✈️ Prépare le niveau 15</strong>
+                Les voyages ouvrent de nouvelles possibilités économiques.
+            </div>
+
+        </div>
+
+        <p>
+            Pour aller plus loin :
+            <a href="gagner-argent.html">
+                consulte le guide pour gagner de l'argent.
             </a>
         </p>
 
+    </section>
 
-        <h2>💪 2. L'entraînement : une priorité</h2>
+
+    <!-- CRIMES -->
+
+    <section class="guide-section">
+
+        <h2>🕵️ Les crimes</h2>
 
         <p>
-            Ton énergie est une ressource importante. Une partie de
-            cette énergie peut être utilisée au gymnase pour améliorer
-            tes statistiques de combat.
+            Les crimes font partie de la progression normale d'un
+            personnage et participent également au gain d'expérience.
+            Le système actuel est <strong>Crimes 2.0</strong>. :contentReference[oaicite:4]{index=4}
+        </p>
+
+        <div class="notice warning">
+
+            <strong>⚠️ Ne cherche pas uniquement le gain immédiat.</strong>
+
+            <p>
+                Le système de crimes repose sur la progression de tes
+                compétences. Apprends progressivement les différentes
+                catégories plutôt que de chercher uniquement le crime
+                qui rapporte le plus aujourd'hui.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMBAT -->
+
+    <section class="guide-section">
+
+        <h2>⚔️ Le combat</h2>
+
+        <p>
+            Le combat est omniprésent dans Torn. Tu peux attaquer
+            d'autres joueurs, mais cela ne signifie pas que tu dois
+            immédiatement chercher les adversaires les plus forts.
+        </p>
+
+        <div class="notice">
+
+            <strong>💡 Pour progresser en niveau</strong>
+
+            <p>
+                Les attaques peuvent donner de l'expérience. Le Wiki
+                officiel indique notamment que vaincre un joueur puis
+                choisir de le laisser partir donne davantage d'expérience
+                qu'un mug ou une hospitalisation. :contentReference[oaicite:5]{index=5}
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FACTIONS -->
+
+    <section class="guide-section">
+
+        <h2>🏴 Rejoindre une faction</h2>
+
+        <p>
+            Une faction est un groupe de joueurs qui peut apporter
+            des bonus, des activités collectives et un environnement
+            beaucoup plus intéressant pour apprendre le jeu.
         </p>
 
         <p>
-            Au début, il n'est pas nécessaire de chercher une
-            optimisation compliquée. Le plus important est de prendre
-            l'habitude de dépenser ton énergie et de faire progresser
-            ton personnage régulièrement.
+            Pour un nouveau joueur, rejoindre une faction active est
+            généralement plus intéressant que de rester complètement
+            isolé.
         </p>
 
-        <div class="card">
+    </section>
 
-            <h3>💡 Le conseil de Baldr</h3>
+
+    <!-- VOYAGES -->
+
+    <section class="guide-section">
+
+        <h2>✈️ Ton premier voyage</h2>
+
+        <p>
+            Une fois le niveau 15 atteint, tu peux utiliser l'agence
+            de voyage située au City Center. Chaque destination possède
+            des objets spécifiques et les stocks à l'étranger sont
+            limités. :contentReference[oaicite:6]{index=6}
+        </p>
+
+        <div class="notice">
+
+            <strong>🇿🇦 🇨🇳 🇦🇪 🇯🇵 ...</strong>
 
             <p>
-                Baldr recommande notamment aux nouveaux joueurs de
-                travailler leurs statistiques afin de progresser
-                suffisamment pour atteindre le niveau 15.
+                Ne pars pas au hasard : regarde les objets disponibles,
+                leur prix actuel et le temps nécessaire pour effectuer
+                le voyage.
             </p>
 
             <p>
-                Son guide rappelle également que l'entraînement reste
-                une composante importante de la progression, même pour
-                les joueurs expérimentés.
-            </p>
-
-            <p>
-                <a
-                    href="https://www.torn.com/forums.php?a=0rh%3D73&b=0&f=61&p=threads&t=16034448"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Lire Baldr's Basic Advice
+                👉
+                <a href="voyages.html">
+                    Voir le guide complet des voyages
                 </a>
             </p>
 
         </div>
 
-
-        <h2>💰 3. Tes premiers revenus</h2>
-
-        <p>
-            Au début, ton personnage ne possède pas beaucoup d'argent.
-            Ce n'est pas grave : tu es encore dans la phase où tu dois
-            construire les bases de ton personnage.
-        </p>
-
-        <p>
-            Pense à récupérer ton salaire et à utiliser les différentes
-            possibilités offertes par le jeu. Le travail et l'éducation
-            font partie des systèmes que les missions de débutant te
-            feront découvrir.
-        </p>
-
-        <p>
-            Évite surtout de dépenser ton argent n'importe comment.
-            Certaines sommes qui semblent importantes au début
-            deviendront rapidement petites lorsque ton personnage
-            progressera.
-        </p>
+    </section>
 
 
-        <h2>⚡ 4. L'énergie : ne la laisse pas dormir</h2>
+    <!-- ERREURS -->
 
-        <p>
-            Ton énergie se régénère avec le temps. Elle représente donc
-            une ressource que tu dois apprendre à gérer.
-        </p>
+    <section class="guide-section">
 
-        <p>
-            Lorsque tu peux l'utiliser intelligemment, entraîne tes
-            statistiques ou utilise-la pour les activités qui
-            correspondent à ton objectif du moment.
-        </p>
+        <h2>❌ Les erreurs classiques du débutant</h2>
 
-        <p>
-            Le principe est simple :
-            <strong>un personnage actif progresse beaucoup plus vite
-            qu'un personnage qui laisse constamment ses ressources
-            inutilisées.</strong>
-        </p>
+        <div class="tip-grid">
 
+            <div class="tip">
+                <strong>Dépenser tout son argent</strong>
+                Garde toujours une réserve financière.
+            </div>
 
-        <h2>🎯 5. Ton premier gros objectif : le niveau 15</h2>
+            <div class="tip">
+                <strong>Négliger le gym</strong>
+                L'énergie non utilisée représente de la progression perdue.
+            </div>
 
-        <p>
-            Si tu ne devais retenir qu'un seul objectif de ce guide,
-            ce serait celui-ci :
-        </p>
+            <div class="tip">
+                <strong>Ignorer l'éducation</strong>
+                Les formations peuvent apporter des bonus très importants.
+            </div>
 
-        <div class="card">
+            <div class="tip">
+                <strong>Voyager sans calculer</strong>
+                Le bénéfice d'un objet ne suffit pas : prends aussi
+                en compte le temps de voyage.
+            </div>
 
-            <h3>Atteins le niveau 15.</h3>
+            <div class="tip">
+                <strong>Acheter sans vérifier</strong>
+                Les prix du marché évoluent. Vérifie toujours le prix
+                actuel avant une grosse dépense.
+            </div>
 
-            <p>
-                Le niveau 15 débloque l'accès à l'agence de voyages et
-                permet de voyager à l'étranger.
-            </p>
-
-            <p>
-                C'est une étape majeure de la progression d'un nouveau
-                joueur, notamment parce que les voyages ouvrent de
-                nouvelles possibilités économiques.
-            </p>
+            <div class="tip">
+                <strong>Vouloir tout faire</strong>
+                Torn est un jeu de progression sur le long terme.
+                Construis ton personnage progressivement.
+            </div>
 
         </div>
 
-        <p>
-            Le Wiki officiel confirme que l'agence de voyages est
-            débloquée au niveau 15.
-        </p>
-
-        <p>
-            <a
-                href="https://wiki.torn.com/wiki/Travel"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Voir le fonctionnement des voyages sur le Wiki officiel
-            </a>
-        </p>
+    </section>
 
 
-        <h2>✈️ 6. Une fois niveau 15 : les voyages</h2>
+    <!-- ROUTE RAPIDE -->
 
-        <p>
-            Une fois le niveau 15 atteint, tu peux voyager depuis
-            l'agence de voyages située dans le City Center.
-        </p>
+    <section class="guide-section">
 
-        <p>
-            Les différentes destinations proposent des objets
-            spécifiques qui ne sont pas disponibles directement à
-            Torn City.
-        </p>
+        <h2>🗺️ La route simple du débutant</h2>
 
-        <p>
-            C'est notamment à partir de cette étape que le commerce
-            avec les objets étrangers devient particulièrement
-            intéressant.
-        </p>
+        <ol class="steps">
 
-        <div class="card">
+            <li>
+                Termine les missions de nouveau joueur.
+            </li>
 
-            <h3>⚠️ Attention aux anciennes informations</h3>
+            <li>
+                Entraîne tes statistiques régulièrement.
+            </li>
 
-            <p>
-                Tu trouveras beaucoup de vieux guides parlant de
-                bénéfices fixes réalisés grâce aux voyages.
-                Ne prends pas ces chiffres comme des garanties.
-            </p>
+            <li>
+                Trouve un travail et commence ton éducation.
+            </li>
 
-            <p>
-                Les prix du marché et l'économie du jeu évoluent.
-                Il faut donc toujours vérifier les prix actuels avant
-                d'acheter des objets pour les revendre.
-            </p>
+            <li>
+                Fais tes crimes régulièrement.
+            </li>
+
+            <li>
+                Mets de côté ton argent plutôt que de tout dépenser.
+            </li>
+
+            <li>
+                Travaille jusqu'au niveau 15.
+            </li>
+
+            <li>
+                Débloque les voyages et commence à découvrir
+                l'économie internationale de Torn.
+            </li>
+
+            <li>
+                Rejoins une faction active et commence à définir
+                ton orientation à long terme.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- APRES -->
+
+    <section class="guide-section">
+
+        <h2>➡️ Et maintenant ?</h2>
+
+        <div class="tip-grid">
+
+            <div class="tip">
+
+                <strong>💰 Gagner de l'argent</strong>
+
+                <p>
+                    Découvre différentes méthodes pour développer
+                    ton capital.
+                </p>
+
+                <a href="gagner-argent.html">
+                    Voir le guide
+                </a>
+
+            </div>
+
+            <div class="tip">
+
+                <strong>✈️ Voyages</strong>
+
+                <p>
+                    Découvre les destinations et leurs objets.
+                </p>
+
+                <a href="voyages.html">
+                    Voir le guide
+                </a>
+
+            </div>
+
+            <div class="tip">
+
+                <strong>📦 Contrebande</strong>
+
+                <p>
+                    Découvre les objets pouvant être achetés
+                    à l'étranger puis revendus.
+                </p>
+
+                <a href="contrebande.html">
+                    Voir le guide
+                </a>
+
+            </div>
 
         </div>
 
-
-        <h2>🧠 7. Ne cherche pas à tout optimiser immédiatement</h2>
-
-        <p>
-            Une erreur fréquente chez les nouveaux joueurs est de
-            vouloir trouver immédiatement la meilleure stratégie
-            possible.
-        </p>
-
-        <p>
-            Torn est un jeu à long terme. Tu vas progressivement
-            découvrir les crimes, les factions, les entreprises,
-            les missions, le marché, les voyages et les différentes
-            façons d'entraîner ton personnage.
-        </p>
-
-        <p>
-            Commence par comprendre les bases. L'optimisation viendra
-            ensuite.
-        </p>
+    </section>
 
 
-        <h2>❌ 8. Quelques erreurs à éviter</h2>
+    <!-- SOURCES -->
+
+    <section class="sources">
+
+        <h2>Sources</h2>
 
         <ul>
+
             <li>
-                Dépenser tout ton argent dans des achats inutiles.
+                <a href="https://wiki.torn.com/wiki/New_Player_Missions"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Missions de nouveau joueur
+                </a>
             </li>
 
             <li>
-                Laisser constamment ton énergie atteindre son maximum.
+                <a href="https://wiki.torn.com/wiki/Level_and_Ranks"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Niveaux et rangs
+                </a>
             </li>
 
             <li>
-                Négliger l'entraînement de tes statistiques.
+                <a href="https://wiki.torn.com/wiki/Education"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Éducation
+                </a>
             </li>
 
             <li>
-                Suivre aveuglément un vieux guide sans vérifier si
-                les mécaniques ont changé.
+                <a href="https://wiki.torn.com/wiki/Travel"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Voyages
+                </a>
             </li>
 
             <li>
-                Vouloir tout apprendre dès le premier jour.
+                <a href="https://wiki.torn.com/wiki/Crimes_2.0"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Crimes 2.0
+                </a>
             </li>
+
+            <li>
+                Guides et travaux de joueurs vétérans,
+                notamment Baldr.
+            </li>
+
         </ul>
-
-
-        <h2>📚 9. Ressources recommandées</h2>
 
         <p>
-            Nous ne prétendons pas remplacer les ressources historiques
-            de la communauté Torn. Au contraire : ce guide s'appuie
-            notamment sur le travail réalisé par des joueurs expérimentés.
+            Guide français maintenu par <strong>DurkSkull</strong>.
         </p>
 
-        <ul>
-
-            <li>
-                <a
-                    href="https://www.torn.com/forums.php?a=0rh%3D73&b=0&f=61&p=threads&t=16034448"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Baldr's Basic Advice
-                </a>
-                — guide de référence pour les nouveaux joueurs.
-            </li>
-
-            <li>
-                <a
-                    href="https://wiki.torn.com/wiki/User_Guides"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Guides communautaires référencés par le Wiki Torn
-                </a>
-                — autres ressources créées par les joueurs.
-            </li>
-
-            <li>
-                <a
-                    href="https://wiki.torn.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Wiki officiel de Torn
-                </a>
-                — pour vérifier les mécaniques du jeu.
-            </li>
-
-        </ul>
+    </section>
 
 
-        <section class="referral">
+    <!-- PARRAINAGE -->
 
-            <h2>🎮 Tu veux essayer Torn ?</h2>
+    <section class="referral">
 
-            <p>
-                Si ce guide t'a donné envie de découvrir le jeu, tu peux
-                commencer ton aventure avec mon lien de parrainage.
-            </p>
+        <h2>🎮 Commencer Torn</h2>
 
-            <p>
-                <a
-                    class="button"
-                    href="https://www.torn.com/4227770"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Commencer Torn
-                </a>
-            </p>
+        <p>
+            Tu souhaites découvrir Torn City ?
+        </p>
 
-            <p class="small">
-                Ce lien est un lien de parrainage personnel.
-            </p>
+        <p>
+            <a href="https://www.torn.com/4227770"
+               target="_blank"
+               rel="noopener noreferrer">
+                Rejoindre Torn City
+            </a>
+        </p>
 
-        </section>
-
-    </div>
-</section>
+    </section>
 
 </main>
 
 
 <footer class="site-footer">
+
     <div class="container">
 
         <p>
-            Torn City France — Guide indépendant consacré à Torn City.
+            Torn City France — Guide indépendant.
         </p>
 
         <p class="small">
-            Ce site n'est pas le site officiel de Torn.
+            Ce site n'est pas affilié officiellement à Torn City.
         </p>
 
     </div>
+
 </footer>
 
 </body>
