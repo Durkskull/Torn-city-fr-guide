@@ -1,32 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Guide français des fleurs et peluches de Torn City : destinations, prix d'achat, valeurs du marché, ensembles du musée et conseils pour voyager."
-    >
+    <title>Fleurs et peluches — Guide Torn City</title>
 
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description"
+          content="Guide français des fleurs et peluches de Torn City : destinations, prix d'achat, revente, rentabilité et collections du musée.">
 
-    <meta
-        http-equiv="Content-Security-Policy"
-        content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self'; style-src 'self'; script-src 'none'; connect-src 'none';"
-    >
+    <meta name="robots" content="index, follow">
 
-    <link
-        rel="canonical"
-        href="https://durkskull.github.io/Torn-city-fr-guide/fleurs-peluches.html"
-    >
-
-    <title>
-        Fleurs et peluches dans Torn City | Torn City France
-    </title>
+    <link rel="canonical"
+          href="https://durkskull.github.io/Torn-city-fr-guide/fleurs-peluches.html">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .items-page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px 60px;
+        }
+
+        .intro {
+            max-width: 820px;
+            margin-bottom: 40px;
+        }
+
+        .notice {
+            margin: 25px 0;
+            padding: 16px 18px;
+            border-left: 4px solid currentColor;
+            background: rgba(127,127,127,.08);
+            border-radius: 7px;
+        }
+
+        .notice.success {
+            border-left-color: #238636;
+        }
+
+        .section {
+            margin-top: 45px;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+        }
+
+        .section h2 small {
+            font-size: .55em;
+            font-weight: 400;
+            opacity: .55;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid rgba(127,127,127,.2);
+            border-radius: 10px;
+            margin-top: 18px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid rgba(127,127,127,.14);
+        }
+
+        th {
+            text-align: left;
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            opacity: .7;
+            background: rgba(127,127,127,.08);
+        }
+
+        th.number,
+        td.number {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .item-name {
+            font-weight: 700;
+        }
+
+        .item-name small {
+            display: block;
+            font-size: .78rem;
+            font-weight: 400;
+            opacity: .6;
+            margin-top: 2px;
+        }
+
+        .country {
+            font-weight: 700;
+        }
+
+        .price {
+            white-space: nowrap;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .card {
+            padding: 16px;
+            border: 1px solid rgba(127,127,127,.18);
+            border-radius: 9px;
+            background: rgba(127,127,127,.04);
+        }
+
+        .card strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .card small {
+            opacity: .65;
+        }
+
+        .small {
+            font-size: .88rem;
+            opacity: .7;
+        }
+
+        .sources {
+            margin-top: 55px;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,911 +154,702 @@
         <p class="site-name">Torn City France</p>
 
         <nav aria-label="Navigation principale">
-
-            <a href="index.html">
-                Accueil
-            </a>
-
-            <a href="guide-debutant.html">
-                Débuter
-            </a>
-
-            <a href="gagner-argent.html">
-                Argent
-            </a>
-
-            <a href="voyages.html">
-                Voyages
-            </a>
-
-            <a href="statistiques.html">
-                Statistiques
-            </a>
-
-            <a href="factions.html">
-                Factions
-            </a>
-
+            <a href="index.html">Accueil</a>
+            <a href="guide-debutant.html">Débuter</a>
+            <a href="gagner-argent.html">Gagner de l'argent</a>
+            <a href="voyages.html">Voyages</a>
+            <a href="fleurs-peluches.html" aria-current="page">Fleurs &amp; peluches</a>
+            <a href="contrebande.html">Contrebande</a>
         </nav>
 
     </div>
 </header>
 
 
-<main>
+<main class="items-page">
 
-<section class="hero">
+    <header class="intro">
 
-    <div class="container">
+        <p class="eyebrow">GUIDE TORN CITY</p>
 
-        <p class="eyebrow">
-            GUIDE FLEURS &amp; PELUCHES — 2026
+        <h1>Fleurs &amp; peluches</h1>
+
+        <p>
+            Les fleurs et les peluches sont parmi les objets les plus
+            connus des voyages dans Torn. Chaque destination possède
+            ses propres objets et leurs prix de marché peuvent varier.
         </p>
 
-        <h1>
-            Fleurs et peluches dans Torn City
-        </h1>
+        <div class="notice">
+            <strong>🌍 Le principe est simple :</strong>
 
-        <p class="intro">
-            Les fleurs et les peluches sont parmi les marchandises
-            les plus connues des voyageurs de Torn. Elles sont achetées
-            à l'étranger puis généralement revendues à d'autres joueurs
-            à Torn.
+            <p>
+                Tu voyages dans un pays, tu achètes ses objets spécifiques,
+                puis tu peux les rapporter à Torn pour les vendre sur
+                le marché ou les conserver pour compléter des collections.
+            </p>
+        </div>
+
+        <div class="notice">
+            <strong>⚠️ Attention aux prix affichés.</strong>
+
+            <p>
+                Le prix d'achat chez le vendeur est fixe, mais le prix
+                auquel tu peux revendre l'objet dépend du marché.
+                Vérifie donc toujours le prix actuel avant de partir.
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- PELUCHES -->
+
+    <section class="section">
+
+        <h2>🧸 Peluches <small>(Plushies)</small></h2>
+
+        <p>
+            Les peluches étrangères sont disponibles dans les destinations
+            correspondantes. Elles peuvent notamment être rapportées à
+            Torn puis revendues aux autres joueurs.
+        </p>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Peluche</th>
+                        <th>Pays</th>
+                        <th class="number">Prix d'achat</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Jaguar
+                                <small>Jaguar Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇲🇽 Mexique</td>
+                        <td class="number price">$10 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Raie
+                                <small>Stingray Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇰🇾 Îles Caïmans</td>
+                        <td class="number price">$7 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Carcajou
+                                <small>Wolverine Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇨🇦 Canada</td>
+                        <td class="number price">$5 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Nessie
+                                <small>Nessie Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇬🇧 Royaume-Uni</td>
+                        <td class="number price">$200</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Renard roux
+                                <small>Red Fox Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇬🇧 Royaume-Uni</td>
+                        <td class="number price">$1 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Singe
+                                <small>Monkey Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇦🇷 Argentine</td>
+                        <td class="number price">$400</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Chamois
+                                <small>Chamois Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇨🇭 Suisse</td>
+                        <td class="number price">$400</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Panda
+                                <small>Panda Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇨🇳 Chine</td>
+                        <td class="number price">$1 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Chameau
+                                <small>Camel Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇦🇪 Émirats arabes unis</td>
+                        <td class="number price">$14 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Lion
+                                <small>Lion Plushie</small>
+                            </span>
+                        </td>
+                        <td class="country">🇿🇦 Afrique du Sud</td>
+                        <td class="number price">$400</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- FLEURS -->
+
+    <section class="section">
+
+        <h2>🌸 Fleurs <small>(Flowers)</small></h2>
+
+        <p>
+            Les fleurs exotiques suivent le même principe : chaque
+            destination possède sa propre fleur.
+        </p>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Fleur</th>
+                        <th>Pays</th>
+                        <th class="number">Prix d'achat</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Dahlia
+                                <small>Dahlia</small>
+                            </span>
+                        </td>
+                        <td class="country">🇲🇽 Mexique</td>
+                        <td class="number price">$300</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Orchidée banane
+                                <small>Banana Orchid</small>
+                            </span>
+                        </td>
+                        <td class="country">🇰🇾 Îles Caïmans</td>
+                        <td class="number price">$600</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Crocus
+                                <small>Crocus</small>
+                            </span>
+                        </td>
+                        <td class="country">🇨🇦 Canada</td>
+                        <td class="number price">$600</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Orchidée
+                                <small>Orchid</small>
+                            </span>
+                        </td>
+                        <td class="country">🇺🇸 Hawaï</td>
+                        <td class="number price">$700</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Bruyère
+                                <small>Heather</small>
+                            </span>
+                        </td>
+                        <td class="country">🇬🇧 Royaume-Uni</td>
+                        <td class="number price">$5 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Ceibo
+                                <small>Ceibo Flower</small>
+                            </span>
+                        </td>
+                        <td class="country">🇦🇷 Argentine</td>
+                        <td class="number price">$500</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Edelweiss
+                                <small>Edelweiss</small>
+                            </span>
+                        </td>
+                        <td class="country">🇨🇭 Suisse</td>
+                        <td class="number price">$900</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Fleur de cerisier
+                                <small>Cherry Blossom</small>
+                            </span>
+                        </td>
+                        <td class="country">🇯🇵 Japon</td>
+                        <td class="number price">$1 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Pivoine
+                                <small>Peony</small>
+                            </span>
+                        </td>
+                        <td class="country">🇨🇳 Chine</td>
+                        <td class="number price">$1 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Tribulus Omanense
+                                <small>Tribulus Omanense</small>
+                            </span>
+                        </td>
+                        <td class="country">🇦🇪 Émirats arabes unis</td>
+                        <td class="number price">$6 000</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="item-name">
+                                Violette africaine
+                                <small>African Violet</small>
+                            </span>
+                        </td>
+                        <td class="country">🇿🇦 Afrique du Sud</td>
+                        <td class="number price">$600</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- RENTABILITE -->
+
+    <section class="section">
+
+        <h2>💰 Comment calculer la rentabilité ?</h2>
+
+        <p>
+            Le prix d'achat ne suffit pas pour déterminer si un voyage
+            est intéressant.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <strong>1. Prix d'achat</strong>
+                <small>
+                    Combien te coûte chaque fleur ou peluche ?
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>2. Prix du marché</strong>
+                <small>
+                    Combien vaut réellement l'objet au moment où tu veux
+                    le vendre ?
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>3. Taxe du marché</strong>
+                <small>
+                    L'Item Market applique une taxe de vente de 5 %.
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>4. Coût du voyage</strong>
+                <small>
+                    Un voyage payant doit être intégré au calcul.
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>5. Temps de voyage</strong>
+                <small>
+                    Une grosse marge n'est pas forcément meilleure si
+                    elle nécessite plusieurs heures de voyage.
+                </small>
+            </div>
+
+        </div>
+
+
+        <!-- BAZAAR -->
+
+        <div class="notice success">
+
+            <strong>🏪 Tu possèdes un Bazaar ?</strong>
+
+            <p>
+                C'est un avantage important pour les ventes de tes
+                objets de voyage : les ventes réalisées dans ton
+                <strong>Bazaar</strong> ne sont pas soumises aux 5 %
+                de taxe de vente de l'Item Market. :contentReference[oaicite:1]{index=1}
+            </p>
+
+            <p>
+                Cela peut améliorer directement ta marge, surtout lorsque
+                tu revends des objets avec une faible marge.
+            </p>
+
+            <p>
+                Ton Bazaar coûte <strong>250 points</strong> à débloquer
+                au Points Building et ne peut être acheté qu'une seule
+                fois. :contentReference[oaicite:2]{index=2}
+            </p>
+
+            <p class="small">
+                Pense donc à comparer le bénéfice net d'une vente sur
+                l'Item Market avec celui d'une vente via ton Bazaar.
+            </p>
+
+        </div>
+
+
+        <div class="notice">
+
+            <strong>Exemple simple</strong>
+
+            <p>
+                Si tu achètes une peluche 10 000 $ et que tu peux
+                réellement la vendre 15 000 $, ta marge brute est
+                de 5 000 $.
+            </p>
+
+            <p>
+                Sur l'Item Market, les 5 % de taxe réduisent le montant
+                réellement récupéré lors de la vente. Dans un Bazaar,
+                cette taxe de vente n'est pas appliquée.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSEE -->
+
+    <section class="section">
+
+        <h2>🏛️ Le musée</h2>
+
+        <p>
+            Les fleurs et les peluches ne servent pas uniquement
+            à gagner de l'argent.
         </p>
 
         <p>
-            Elles servent également à constituer des ensembles pouvant
-            être échangés contre des points au musée.
+            Une fois le musée débloqué grâce à la formation
+            <strong>History Studies</strong>, certains ensembles peuvent
+            être échangés contre des points du musée.
         </p>
 
-    </div>
+        <div class="cards">
 
-</section>
+            <div class="card">
+                <strong>🧸 Set de peluches</strong>
 
+                <small>
+                    Les peluches nécessaires peuvent être conservées
+                    pour compléter le set du musée.
+                </small>
+            </div>
 
-<section class="content">
+            <div class="card">
+                <strong>🌸 Set de fleurs exotiques</strong>
 
-<div class="container">
+                <small>
+                    Les fleurs étrangères peuvent également servir
+                    à compléter un set du musée.
+                </small>
+            </div>
 
+        </div>
 
-<h2>🌸 Pourquoi acheter des fleurs et des peluches ?</h2>
+        <div class="notice">
 
-<p>
-    Chaque destination étrangère possède des objets que l'on ne trouve
-    pas normalement à Torn. Les magasins étrangers proposent notamment
-    des fleurs et des peluches spécifiques à leur pays.
-</p>
+            <strong>💡 Ne vends pas automatiquement tout ce que tu trouves.</strong>
 
-<p>
-    Les stocks sont limités et sont régulièrement réapprovisionnés.
-    Il est donc possible qu'un objet ne soit momentanément plus
-    disponible lorsque tu arrives sur place. :contentReference[oaicite:0]{index=0}
-</p>
+            <p>
+                Si tu cherches à compléter un set du musée, conserver
+                certains objets peut être plus intéressant que de les
+                vendre immédiatement.
+            </p>
 
-<div class="card">
+        </div>
 
-    <h3>
-        💰 Le principe du commerce
-    </h3>
-
-    <ol>
+    </section>
 
-        <li>
-            Voyager vers une destination.
-        </li>
-
-        <li>
-            Acheter les objets disponibles.
-        </li>
-
-        <li>
-            Les rapporter à Torn.
-        </li>
-
-        <li>
-            Les vendre sur le marché aux objets
-            <small>(Item Market)</small>,
-            dans un bazar ou directement à un autre joueur.
-        </li>
-
-    </ol>
-
-    <p>
-        Le prix de vente dépend du marché et peut évoluer.
-        Il faut donc vérifier la valeur actuelle avant de remplir
-        ta capacité de transport.
-    </p>
-
-</div>
-
-
-<h2>🧸 Les peluches <small>(Plushies)</small></h2>
-
-<p>
-    Les peluches sont des jouets disponibles principalement dans les
-    magasins généraux des destinations étrangères.
-</p>
-
-<p>
-    Elles sont particulièrement recherchées parce qu'elles permettent
-    de constituer un ensemble complet échangeable au musée contre
-    <strong>10 points</strong>, une fois le diplôme d'histoire obtenu.
-    :contentReference[oaicite:1]{index=1}
-</p>
-
-
-<h3>📋 Les peluches de voyage</h3>
-
-<div class="card">
-
-    <ul>
-
-        <li>
-            <strong>
-                Dromadaire
-                <small>(Camel Plushie)</small>
-            </strong>
-            — Émirats arabes unis
-        </li>
-
-        <li>
-            <strong>
-                Chamois
-                <small>(Chamois Plushie)</small>
-            </strong>
-            — Suisse
-        </li>
-
-        <li>
-            <strong>
-                Jaguar
-                <small>(Jaguar Plushie)</small>
-            </strong>
-            — Mexique
-        </li>
-
-        <li>
-            <strong>
-                Lion
-                <small>(Lion Plushie)</small>
-            </strong>
-            — Afrique du Sud
-        </li>
-
-        <li>
-            <strong>
-                Singe
-                <small>(Monkey Plushie)</small>
-            </strong>
-            — Argentine
-        </li>
-
-        <li>
-            <strong>
-                Nessie
-                <small>(Nessie Plushie)</small>
-            </strong>
-            — Royaume-Uni
-        </li>
-
-        <li>
-            <strong>
-                Panda
-                <small>(Panda Plushie)</small>
-            </strong>
-            — Chine
-        </li>
-
-        <li>
-            <strong>
-                Renard roux
-                <small>(Red Fox Plushie)</small>
-            </strong>
-            — Royaume-Uni
-        </li>
-
-        <li>
-            <strong>
-                Raie
-                <small>(Stingray Plushie)</small>
-            </strong>
-            — Îles Caïmans
-        </li>
-
-        <li>
-            <strong>
-                Carcajou
-                <small>(Wolverine Plushie)</small>
-            </strong>
-            — Canada
-        </li>
-
-    </ul>
-
-    <p>
-        Les trois autres peluches de l'ensemble — le chaton,
-        le mouton et l'ours en peluche — sont disponibles à
-        Bits 'n' Bobs à Torn.
-        :contentReference[oaicite:2]{index=2}
-    </p>
-
-</div>
-
-
-<h3>💵 Valeurs actuelles indicatives</h3>
-
-<p>
-    Les valeurs de marché ci-dessous sont celles relevées par le Wiki
-    au moment de la dernière vérification. Elles ne constituent pas
-    un prix de vente garanti.
-</p>
-
-<div class="card">
-
-    <ul>
-
-        <li>
-            Dromadaire
-            <small>(Camel Plushie)</small>
-            — achat : <strong>14 000 $</strong> — marché : environ
-            <strong>75 985 $</strong>
-        </li>
-
-        <li>
-            Chamois
-            <small>(Chamois Plushie)</small>
-            — achat : <strong>400 $</strong> — marché : environ
-            <strong>8 925 $</strong>
-        </li>
-
-        <li>
-            Jaguar
-            <small>(Jaguar Plushie)</small>
-            — achat : <strong>10 000 $</strong> — marché : environ
-            <strong>15 389 $</strong>
-        </li>
-
-        <li>
-            Lion
-            <small>(Lion Plushie)</small>
-            — achat : <strong>400 $</strong> — marché : environ
-            <strong>54 702 $</strong>
-        </li>
-
-        <li>
-            Singe
-            <small>(Monkey Plushie)</small>
-            — achat : <strong>400 $</strong> — marché : environ
-            <strong>36 050 $</strong>
-        </li>
-
-        <li>
-            Nessie
-            <small>(Nessie Plushie)</small>
-            — achat : <strong>200 $</strong> — marché : environ
-            <strong>32 141 $</strong>
-        </li>
-
-        <li>
-            Panda
-            <small>(Panda Plushie)</small>
-            — achat : <strong>400 $</strong> — marché : environ
-            <strong>52 021 $</strong>
-        </li>
-
-        <li>
-            Renard roux
-            <small>(Red Fox Plushie)</small>
-            — achat : <strong>1 000 $</strong> — marché : environ
-            <strong>33 841 $</strong>
-        </li>
-
-        <li>
-            Raie
-            <small>(Stingray Plushie)</small>
-            — achat : <strong>400 $</strong> — marché : environ
-            <strong>7 457 $</strong>
-        </li>
-
-        <li>
-            Carcajou
-            <small>(Wolverine Plushie)</small>
-            — achat : <strong>30 $</strong> — marché : environ
-            <strong>6 994 $</strong>
-        </li>
-
-    </ul>
-
-</div>
-
-<p class="small">
-    Les valeurs de marché changent avec l'offre et la demande.
-    Consulte toujours le marché avant de voyager.
-</p>
-
-
-<h2>🌺 Les fleurs <small>(Flowers)</small></h2>
-
-<p>
-    Les fleurs fonctionnent sur un principe similaire aux peluches.
-    Plusieurs fleurs étrangères font partie de l'ensemble des fleurs
-    exotiques
-    <small>(Exotic Flower Set)</small>.
-</p>
-
-<p>
-    Un ensemble complet de fleurs exotiques peut être échangé au musée
-    contre <strong>10 points</strong>, une fois le diplôme d'histoire
-    obtenu. :contentReference[oaicite:3]{index=3}
-</p>
-
-
-<h3>🌍 L'ensemble des fleurs exotiques</h3>
-
-<div class="card">
-
-    <ul>
-
-        <li>
-            Violette africaine
-            <small>(African Violet)</small>
-            — Afrique du Sud
-        </li>
-
-        <li>
-            Orchidée banane
-            <small>(Banana Orchid)</small>
-            — Îles Caïmans
-        </li>
-
-        <li>
-            Fleur de ceibo
-            <small>(Ceibo Flower)</small>
-            — Argentine
-        </li>
-
-        <li>
-            Fleur de cerisier
-            <small>(Cherry Blossom)</small>
-            — Japon
-        </li>
-
-        <li>
-            Crocus
-            <small>(Crocus)</small>
-            — Canada
-        </li>
-
-        <li>
-            Dahlia
-            <small>(Dahlia)</small>
-            — Mexique
-        </li>
-
-        <li>
-            Edelweiss
-            <small>(Edelweiss)</small>
-            — Suisse
-        </li>
-
-        <li>
-            Bruyère
-            <small>(Heather)</small>
-            — Royaume-Uni
-        </li>
-
-        <li>
-            Orchidée
-            <small>(Orchid)</small>
-            — Hawaï
-        </li>
-
-        <li>
-            Pivoine
-            <small>(Peony)</small>
-            — Chine
-        </li>
-
-        <li>
-            Tribulus omanense
-            <small>(Tribulus Omanense)</small>
-            — Émirats arabes unis
-        </li>
-
-    </ul>
-
-</div>
-
-
-<h3>💵 Prix d'achat de l'ensemble</h3>
-
-<p>
-    Le prix d'achat théorique de l'ensemble complet des fleurs
-    exotiques est actuellement de <strong>25 500 $</strong>.
-</p>
-
-<div class="card">
-
-    <ul>
-
-        <li>
-            Violette africaine
-            <small>(African Violet)</small>
-            — <strong>2 000 $</strong>
-        </li>
-
-        <li>
-            Orchidée banane
-            <small>(Banana Orchid)</small>
-            — <strong>4 000 $</strong>
-        </li>
-
-        <li>
-            Fleur de ceibo
-            <small>(Ceibo Flower)</small>
-            — <strong>500 $</strong>
-        </li>
-
-        <li>
-            Fleur de cerisier
-            <small>(Cherry Blossom)</small>
-            — <strong>500 $</strong>
-        </li>
-
-        <li>
-            Crocus
-            <small>(Crocus)</small>
-            — <strong>600 $</strong>
-        </li>
-
-        <li>
-            Dahlia
-            <small>(Dahlia)</small>
-            — <strong>300 $</strong>
-        </li>
-
-        <li>
-            Edelweiss
-            <small>(Edelweiss)</small>
-            — <strong>900 $</strong>
-        </li>
-
-        <li>
-            Bruyère
-            <small>(Heather)</small>
-            — <strong>5 000 $</strong>
-        </li>
-
-        <li>
-            Orchidée
-            <small>(Orchid)</small>
-            — <strong>700 $</strong>
-        </li>
-
-        <li>
-            Pivoine
-            <small>(Peony)</small>
-            — <strong>5 000 $</strong>
-        </li>
-
-        <li>
-            Tribulus omanense
-            <small>(Tribulus Omanense)</small>
-            — <strong>6 000 $</strong>
-        </li>
-
-    </ul>
-
-    <p>
-        Total : <strong>25 500 $</strong>.
-        :contentReference[oaicite:4]{index=4}
-    </p>
-
-</div>
-
-
-<h2>🎒 Combien puis-je en rapporter ?</h2>
-
-<p>
-    Depuis la mise à jour des voyages de juin 2026, la capacité de
-    transport standard est de <strong>10 objets par voyage</strong>.
-</p>
-
-<p>
-    Plusieurs améliorations permettent cependant d'augmenter cette
-    capacité. Une piste d'atterrissage avec pilote, le bonus WLT ou
-    un billet classe affaires portent notamment la capacité de base
-    à <strong>15 objets</strong>. :contentReference[oaicite:5]{index=5}
-</p>
-
-<div class="card">
-
-    <h3>🧳 Les valises</h3>
-
-    <p>
-        Seule la plus grande valise possédée est utilisée.
-        Elles ne se cumulent pas.
-    </p>
-
-    <ul>
-
-        <li>
-            Petite valise
-            <small>(Small Suitcase)</small>
-            → +1 objet
-        </li>
-
-        <li>
-            Valise moyenne
-            <small>(Medium Suitcase)</small>
-            → +2 objets
-        </li>
-
-        <li>
-            Grande valise
-            <small>(Large Suitcase)</small>
-            → +3 objets
-        </li>
-
-    </ul>
-
-    <p>
-        D'autres bonus peuvent encore augmenter cette capacité.
-        :contentReference[oaicite:6]{index=6}
-    </p>
-
-</div>
-
-
-<h2>📈 Comment choisir une marchandise rentable ?</h2>
-
-<p>
-    Ne te contente pas de regarder la valeur de marché affichée
-    dans un guide.
-</p>
-
-<p>
-    Pour un voyage commercial, regarde plutôt :
-</p>
-
-<ol>
-
-    <li>
-        le prix d'achat dans le pays ;
-    </li>
-
-    <li>
-        le prix auquel l'objet se vend réellement à Torn ;
-    </li>
-
-    <li>
-        ta capacité de transport ;
-    </li>
-
-    <li>
-        le coût du voyage ;
-    </li>
-
-    <li>
-        la durée du voyage ;
-    </li>
-
-    <li>
-        la demande actuelle des joueurs.
-    </li>
-
-</ol>
-
-
-<div class="card">
-
-    <h3>
-        🧮 La bonne comparaison
-    </h3>
-
-    <p>
-        <strong>
-            Bénéfice par objet =
-            prix de vente − prix d'achat
-        </strong>
-    </p>
-
-    <p>
-        Puis :
-    </p>
-
-    <p>
-        <strong>
-            Bénéfice potentiel =
-            bénéfice par objet × nombre d'objets transportés
-        </strong>
-    </p>
-
-    <p>
-        Enfin, compare ce résultat au temps nécessaire pour effectuer
-        le voyage.
-    </p>
-
-</div>
-
-
-<h2>🏛️ Le musée</h2>
-
-<p>
-    Les fleurs et les peluches ont une deuxième utilité :
-    elles peuvent être conservées pour compléter leurs ensembles.
-</p>
-
-<p>
-    Une fois le diplôme d'histoire
-    <small>(Bachelor of History)</small>
-    terminé, le musée permet d'échanger certains ensembles contre
-    des points.
-</p>
-
-<h3>🧸 Ensemble de peluches</h3>
-
-<p>
-    L'ensemble complet comprend 13 peluches et rapporte
-    <strong>10 points</strong>.
-    :contentReference[oaicite:7]{index=7}
-</p>
-
-<p>
-    Il comprend notamment les peluches étrangères listées plus haut,
-    ainsi que le chaton, le mouton et l'ours en peluche disponibles
-    à Torn.
-</p>
-
-
-<h3>🌺 Ensemble de fleurs exotiques</h3>
-
-<p>
-    L'ensemble comprend les 11 fleurs exotiques présentées dans
-    cette page et rapporte également <strong>10 points</strong>.
-    :contentReference[oaicite:8]{index=8}
-</p>
-
-
-<h2>⚠️ Les erreurs à éviter</h2>
-
-<ul>
-
-    <li>
-        Acheter une marchandise uniquement parce que sa valeur de
-        marché semble élevée.
-    </li>
-
-    <li>
-        Oublier le coût du voyage.
-    </li>
-
-    <li>
-        Ne pas tenir compte de sa capacité de transport.
-    </li>
-
-    <li>
-        Dépenser tout son capital avant de connaître le marché.
-    </li>
-
-    <li>
-        Confondre prix théorique et prix auquel un joueur achètera
-        réellement ton objet.
-    </li>
-
-    <li>
-        Oublier que les stocks des magasins étrangers sont limités.
-    </li>
-
-    <li>
-        Acheter des objets destinés au musée sans savoir si tu veux
-        réellement constituer les ensembles.
-    </li>
-
-</ul>
-
-
-<h2>💡 Conseil de vétéran</h2>
-
-<div class="card">
-
-    <p>
-        Les fleurs et les peluches sont une excellente manière
-        d'apprendre le fonctionnement du commerce à Torn, mais il ne
-        faut pas considérer chaque voyage comme automatiquement rentable.
-    </p>
-
-    <p>
-        Les guides de joueurs vétérans comme <strong>Baldr</strong>
-        sont particulièrement utiles pour comprendre la logique
-        générale du commerce et de la progression.
-    </p>
-
-    <p>
-        Utilise ensuite les prix actuels du marché pour prendre
-        ta décision au moment du voyage.
-    </p>
-
-</div>
-
-
-<h2>🔗 À lire ensuite</h2>
-
-<div class="cards">
-
-    <article class="card">
-
-        <h3>
-            ✈️ Voyager dans Torn
-        </h3>
+
+    <!-- CONSEILS -->
+
+    <section class="section">
+
+        <h2>🧠 Conseils pour les voyageurs</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <strong>Ne regarde pas uniquement la marge.</strong>
+                <small>
+                    Compare toujours la marge avec le temps nécessaire
+                    pour effectuer le voyage.
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>Surveille le marché.</strong>
+                <small>
+                    Les valeurs changent. Un prix vu hier n'est pas
+                    forcément le prix disponible aujourd'hui.
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>Pense aux sets.</strong>
+                <small>
+                    Certaines fleurs et peluches peuvent avoir une valeur
+                    supplémentaire pour les joueurs qui complètent
+                    le musée.
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>Regarde ton inventaire.</strong>
+                <small>
+                    La rentabilité dépend aussi du nombre d'objets
+                    que tu peux transporter.
+                </small>
+            </div>
+
+            <div class="card">
+                <strong>🏪 Pense au Bazaar.</strong>
+                <small>
+                    Si tu en possèdes un, les ventes ne subissent pas
+                    les 5 % de taxe de l'Item Market.
+                </small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIENS -->
+
+    <section class="section">
+
+        <h2>➡️ Pour continuer</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <strong>✈️ Voyages</strong>
+
+                <p>
+                    Compare les destinations, les temps de vol
+                    et les coûts.
+                </p>
+
+                <a href="voyages.html">
+                    Voir le guide des voyages
+                </a>
+            </div>
+
+            <div class="card">
+                <strong>💰 Gagner de l'argent</strong>
+
+                <p>
+                    Découvre d'autres méthodes pour développer
+                    ton capital.
+                </p>
+
+                <a href="gagner-argent.html">
+                    Voir le guide
+                </a>
+            </div>
+
+            <div class="card">
+                <strong>📦 Contrebande</strong>
+
+                <p>
+                    Découvre les objets étrangers pouvant être revendus
+                    aux PNJ ou sur le marché.
+                </p>
+
+                <a href="contrebande.html">
+                    Voir le guide
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOURCES -->
+
+    <section class="sources">
+
+        <h2>Sources</h2>
+
+        <ul>
+
+            <li>
+                <a href="https://wiki.torn.com/wiki/Plushie"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Plushies
+                </a>
+            </li>
+
+            <li>
+                <a href="https://wiki.torn.com/wiki/Travel"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Travel
+                </a>
+            </li>
+
+            <li>
+                <a href="https://wiki.torn.com/wiki/Museum"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Museum
+                </a>
+            </li>
+
+            <li>
+                <a href="https://wiki.torn.com/wiki/Item_Market"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Item Market
+                </a>
+            </li>
+
+            <li>
+                <a href="https://wiki.torn.com/wiki/Bazaar"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Wiki officiel — Bazaar
+                </a>
+            </li>
+
+            <li>
+                Guides et travaux de joueurs vétérans,
+                notamment Baldr.
+            </li>
+
+        </ul>
 
         <p>
-            Découvre les destinations, les temps de trajet et les
-            différentes améliorations disponibles.
+            Guide français maintenu par <strong>DurkSkull</strong>.
+        </p>
+
+    </section>
+
+
+    <!-- PARRAINAGE -->
+
+    <section class="referral">
+
+        <h2>🎮 Commencer Torn</h2>
+
+        <p>
+            Tu souhaites découvrir Torn City ?
         </p>
 
         <p>
-            <a href="voyages.html">
-                Voir le guide des voyages →
+            <a href="https://www.torn.com/4227770"
+               target="_blank"
+               rel="noopener noreferrer">
+                Rejoindre Torn City
             </a>
         </p>
 
-    </article>
-
-
-    <article class="card">
-
-        <h3>
-            💰 Gagner de l'argent
-        </h3>
-
-        <p>
-            Découvre les autres méthodes de commerce et notamment
-            la contrebande.
-        </p>
-
-        <p>
-            <a href="gagner-argent.html">
-                Voir le guide pour gagner de l'argent →
-            </a>
-        </p>
-
-    </article>
-
-</div>
-
-
-<h2>📚 Sources</h2>
-
-<ul>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Flower"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Fleurs
-            <small>(Flower)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Plushie"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Peluches
-            <small>(Plushie)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Exotic_Flower_Set"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Ensemble de fleurs exotiques
-            <small>(Exotic Flower Set)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Plushie_set"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Ensemble de peluches
-            <small>(Plushie Set)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Museum"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Musée
-            <small>(Museum)</small>
-        </a>
-    </li>
-
-    <li>
-        <a
-            href="https://wiki.torn.com/wiki/Travel"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Wiki officiel — Voyages
-            <small>(Travel)</small>
-        </a>
-    </li>
-
-    <li>
-        Guides et conseils de <strong>Baldr</strong>,
-        joueur vétéran de Torn.
-    </li>
-
-</ul>
-
-
-<div class="card">
-
-    <h3>
-        ✍️ À propos de ce guide
-    </h3>
-
-    <p>
-        Guide rédigé et adapté en français par
-        <strong>DurkSkull</strong>,
-        avec l'aide des ressources de la communauté Torn.
-    </p>
-
-    <p class="small">
-        Dernière vérification : août 2026.
-    </p>
-
-</div>
-
-
-<section class="referral">
-
-    <h2>
-        🎮 Tu veux commencer Torn ?
-    </h2>
-
-    <p>
-        Si ce guide t'a été utile et que tu souhaites découvrir Torn,
-        tu peux commencer ton aventure avec mon lien de parrainage.
-    </p>
-
-    <p>
-
-        <a
-            class="button"
-            href="https://www.torn.com/4227770"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Rejoindre Torn
-        </a>
-
-    </p>
-
-    <p class="small">
-        Ce lien est un lien de parrainage personnel.
-    </p>
-
-</section>
-
-
-</div>
-
-</section>
+    </section>
 
 </main>
 
@@ -951,11 +859,11 @@
     <div class="container">
 
         <p>
-            Torn City France — Guide indépendant consacré à Torn City.
+            Torn City France — Guide indépendant.
         </p>
 
         <p class="small">
-            Ce site n'est pas le site officiel de Torn.
+            Ce site n'est pas affilié officiellement à Torn City.
         </p>
 
     </div>
