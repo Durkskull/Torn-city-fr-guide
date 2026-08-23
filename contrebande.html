@@ -4,21 +4,129 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description"
-          content="Guide français de la contrebande dans Torn City : objets, destinations, prix d'achat, valeur de marché, rentabilité et conseils.">
-
+    <meta name="description" content="Guide français de la contrebande dans Torn City : prix minimum d'achat, revente aux PNJ, bénéfices et prérequis.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self'; style-src 'self'; script-src 'none'; connect-src 'none';">
 
-    <link rel="canonical"
-          href="https://durkskull.github.io/Torn-city-fr-guide/contrebande.html">
+    <link rel="canonical" href="https://durkskull.github.io/Torn-city-fr-guide/contrebande.html">
 
-    <title>Contrebande dans Torn City : guide et rentabilité | Torn City France</title>
+    <title>Contrebande dans Torn City | Torn City France</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contraband-intro {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .info-box {
+            padding: 1.1rem;
+            border-radius: 12px;
+            background: rgba(127,127,127,.08);
+        }
+
+        .country-block {
+            margin: 2.5rem 0;
+        }
+
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .item-card {
+            padding: 1.15rem;
+            border: 1px solid rgba(127,127,127,.18);
+            border-radius: 14px;
+            background: rgba(127,127,127,.045);
+        }
+
+        .item-card h3 {
+            margin-top: 0;
+            margin-bottom: .8rem;
+        }
+
+        .item-card small {
+            font-weight: 400;
+            opacity: .72;
+        }
+
+        .price-lines {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .65rem;
+            margin: .8rem 0;
+        }
+
+        .price {
+            padding: .65rem .75rem;
+            border-radius: 9px;
+            background: rgba(127,127,127,.08);
+        }
+
+        .price strong {
+            display: block;
+            font-size: 1.05rem;
+        }
+
+        .profit {
+            margin-top: .75rem;
+            padding: .7rem .8rem;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
+        .profit.good {
+            background: rgba(40,160,80,.12);
+        }
+
+        .profit.market {
+            background: rgba(100,120,180,.12);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: .22rem .55rem;
+            margin: 0 .3rem .25rem 0;
+            border-radius: 999px;
+            font-size: .78rem;
+            font-weight: 700;
+            background: rgba(127,127,127,.12);
+        }
+
+        .tag-pnj {
+            background: rgba(40,160,80,.14);
+        }
+
+        .tag-lock {
+            background: rgba(220,170,40,.16);
+        }
+
+        .note {
+            font-size: .9rem;
+            opacity: .78;
+        }
+
+        @media (max-width: 800px) {
+            .contraband-intro,
+            .item-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .price-lines {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -46,22 +154,23 @@
 <section class="hero">
     <div class="container">
 
-        <p class="eyebrow">GUIDE CONTREBANDE — 2026</p>
+        <p class="eyebrow">GUIDE CONTREBANDE — AOÛT 2026</p>
 
         <h1>La contrebande dans Torn City</h1>
 
         <p class="intro">
             La contrebande
             <small>(Contraband)</small>
-            regroupe des objets vendus dans les marchés noirs
+            regroupe les objets vendus sur les marchés noirs
             <small>(Black Markets)</small>
             des différentes destinations étrangères.
         </p>
 
         <p>
-            Certains de ces objets peuvent être achetés à très bas prix
-            par rapport à leur valeur à Torn et constituent donc une
-            source potentielle de bénéfices pour les voyageurs.
+            Cette page privilégie les
+            <strong>prix minimum d'achat</strong>
+            et, lorsque cela est possible,
+            le <strong>prix fixe de revente au PNJ</strong>.
         </p>
 
     </div>
@@ -72,585 +181,1038 @@
 <div class="container">
 
 
-<h2>☠️ Comment fonctionne la contrebande ?</h2>
+<div class="contraband-intro">
 
-<div class="card">
+    <div class="info-box">
+        <strong>🛒 Prix minimum</strong>
+        <p>
+            Le montant indiqué correspond au prix minimum d'achat
+            chez le vendeur étranger.
+        </p>
+    </div>
 
-    <p>
-        Depuis la mise à jour de la contrebande, les magasins étrangers
-        sont séparés en trois catégories :
-    </p>
+    <div class="info-box">
+        <strong>💰 Revente PNJ</strong>
+        <p>
+            Lorsqu'un PNJ rachète directement l'objet à prix fixe,
+            le bénéfice peut être calculé précisément.
+        </p>
+    </div>
 
-    <ul>
-        <li>
-            <strong>Magasin général</strong>
-            <small>(General Store)</small>
-        </li>
-
-        <li>
-            <strong>Armurerie</strong>
-            <small>(Arms Dealer)</small>
-        </li>
-
-        <li>
-            <strong>Marché noir</strong>
-            <small>(Black Market)</small>
-        </li>
-    </ul>
-
-    <p>
-        La contrebande se trouve dans le marché noir.
-        :contentReference[oaicite:1]{index=1}
-    </p>
+    <div class="info-box">
+        <strong>⚠️ Attention</strong>
+        <p>
+            Certains acheteurs nécessitent d'avoir débloqué
+            certaines fonctionnalités ou certains cours.
+        </p>
+    </div>
 
 </div>
 
 
-<h2>⚠️ Les prix changent</h2>
-
-<p>
-    C'est probablement la chose la plus importante à retenir.
-</p>
-
-<p>
-    Le prix d'achat des objets de contrebande n'est
-    <strong>pas fixe</strong> : il peut varier plusieurs fois par jour.
-    :contentReference[oaicite:2]{index=2}
-</p>
-
-<p>
-    Les prix indiqués ci-dessous servent donc de
-    <strong>fourchettes de référence</strong>, pas de garantie de prix
-    au moment où tu voyages.
-</p>
-
-
-<h2>📋 Les objets de contrebande</h2>
-
 <div class="card">
 
-<table>
-    <thead>
-        <tr>
-            <th>Objet</th>
-            <th>Destination</th>
-            <th>Achat minimum</th>
-            <th>Achat maximum</th>
-            <th>Valeur de marché</th>
-        </tr>
-    </thead>
-
-    <tbody>
-
-        <tr>
-            <td>
-                Ambre gris
-                <small>(Ambergris Lump)</small>
-            </td>
-            <td>Émirats arabes unis</td>
-            <td>335 597 $</td>
-            <td>342 000 $</td>
-            <td>492 999 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Pointe de basalte
-                <small>(Basalt Point)</small>
-            </td>
-            <td>Hawaï</td>
-            <td>107 253 $</td>
-            <td>130 542 $</td>
-            <td>112 612 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Bile d'ours
-                <small>(Bear Gall)</small>
-            </td>
-            <td>Canada</td>
-            <td>28 475 $</td>
-            <td>33 058 $</td>
-            <td>34 697 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Obligation au porteur
-                <small>(Bearer Bond)</small>
-            </td>
-            <td>Îles Caïmans</td>
-            <td>81 702 $</td>
-            <td>84 000 $</td>
-            <td>90 014 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Pointe de calcédoine
-                <small>(Chalcedony Point)</small>
-            </td>
-            <td>Argentine</td>
-            <td>124 364 $</td>
-            <td>132 523 $</td>
-            <td>147 058 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Pointe de chert
-                <small>(Chert Point)</small>
-            </td>
-            <td>Royaume-Uni</td>
-            <td>104 228 $</td>
-            <td>120 570 $</td>
-            <td>132 792 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Manga contrefait
-                <small>(Counterfeit Manga)</small>
-            </td>
-            <td>Japon</td>
-            <td>20 587 $</td>
-            <td>24 112 $</td>
-            <td>69 426 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Poudre d'éphédrine
-                <small>(Ephedrine Powder)</small>
-            </td>
-            <td>Suisse</td>
-            <td>14 422 $</td>
-            <td>15 744 $</td>
-            <td>28 730 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Ampoule d'ergotamine
-                <small>(Ergotamine Ampoule)</small>
-            </td>
-            <td>Suisse</td>
-            <td>4 560 $</td>
-            <td>5 170 $</td>
-            <td>20 297 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Insuline
-                <small>(Insulin)</small>
-            </td>
-            <td>Canada</td>
-            <td>2 467 $</td>
-            <td>3 115 $</td>
-            <td>9 043 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Fragment de météorite
-                <small>(Meteorite Fragment)</small>
-            </td>
-            <td>Argentine</td>
-            <td>436 555 $</td>
-            <td>484 816 $</td>
-            <td>538 345 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Perles naturelles
-                <small>(Natural Pearls)</small>
-            </td>
-            <td>Émirats arabes unis</td>
-            <td>98 622 $</td>
-            <td>99 876 $</td>
-            <td>149 345 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Pointe d'obsidienne
-                <small>(Obsidian Point)</small>
-            </td>
-            <td>Mexique</td>
-            <td>108 363 $</td>
-            <td>152 939 $</td>
-            <td>144 689 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Écailles de pangolin
-                <small>(Pangolin Scales)</small>
-            </td>
-            <td>Chine</td>
-            <td>127 969 $</td>
-            <td>144 536 $</td>
-            <td>204 362 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Fossile de Patagonie
-                <small>(Patagonian Fossil)</small>
-            </td>
-            <td>Argentine</td>
-            <td>599 257 $</td>
-            <td>666 306 $</td>
-            <td>677 044 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Pointe de quartz
-                <small>(Quartz Point)</small>
-            </td>
-            <td>Canada</td>
-            <td>129 509 $</td>
-            <td>148 657 $</td>
-            <td>133 500 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Pointe de quartzite
-                <small>(Quartzite Point)</small>
-            </td>
-            <td>Afrique du Sud</td>
-            <td>114 601 $</td>
-            <td>117 615 $</td>
-            <td>161 937 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Ivoire brut
-                <small>(Raw Ivory)</small>
-            </td>
-            <td>Afrique du Sud</td>
-            <td>1 946 $</td>
-            <td>2 013 $</td>
-            <td>69 637 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Huile de safrole
-                <small>(Safrole Oil)</small>
-            </td>
-            <td>Suisse</td>
-            <td>4 967 $</td>
-            <td>5 089 $</td>
-            <td>16 019 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Aileron de requin
-                <small>(Shark Fin)</small>
-            </td>
-            <td>Hawaï</td>
-            <td>20 200 $</td>
-            <td>21 892 $</td>
-            <td>65 763 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Poudre d'os de tigre
-                <small>(Tiger Bone Powder)</small>
-            </td>
-            <td>Chine</td>
-            <td>29 123 $</td>
-            <td>31 547 $</td>
-            <td>69 777 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Carapace de tortue
-                <small>(Turtle Shell)</small>
-            </td>
-            <td>Hawaï</td>
-            <td>56 269 $</td>
-            <td>64 136 $</td>
-            <td>97 728 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Diamants non taillés
-                <small>(Uncut Diamonds)</small>
-            </td>
-            <td>Afrique du Sud</td>
-            <td>192 118 $</td>
-            <td>204 875 $</td>
-            <td>239 646 $</td>
-        </tr>
-
-        <tr>
-            <td>
-                Viande de baleine
-                <small>(Whale Meat)</small>
-            </td>
-            <td>Japon</td>
-            <td>2 050 $</td>
-            <td>2 240 $</td>
-            <td>39 710 $</td>
-        </tr>
-
-    </tbody>
-</table>
-
-</div>
-
-
-<h2>💰 Comment calculer la rentabilité ?</h2>
-
-<p>
-    La valeur de marché n'est pas automatiquement ton bénéfice.
-</p>
-
-<p>
-    Pour avoir une estimation correcte, utilise :
-</p>
-
-<div class="card">
+    <h2>📌 Comment lire cette page</h2>
 
     <p>
-        <strong>
-            Bénéfice par objet =
-            prix de vente réel − prix d'achat
-        </strong>
+        Les prix d'achat de la contrebande peuvent varier.
+        Nous affichons donc le <strong>prix minimum</strong>.
     </p>
 
     <p>
-        Puis :
+        Pour les objets revendables directement à un PNJ,
+        le bénéfice affiché correspond à :
     </p>
 
     <p>
         <strong>
-            Bénéfice du voyage =
-            bénéfice par objet × nombre d'objets transportés
-            − coût du voyage
+            Prix fixe du PNJ − prix minimum d'achat
         </strong>
+    </p>
+
+    <p class="note">
+        Cette marge est calculée avant le coût du voyage et suppose
+        que l'objet a été acheté au prix minimum.
     </p>
 
 </div>
 
 
-<h2>🎒 La capacité est déterminante</h2>
+<h2>🇿🇦 Afrique du Sud</h2>
 
-<p>
-    La capacité standard actuelle est de <strong>10 objets</strong>
-    par voyage.
-</p>
+<section class="country-block">
+<div class="item-grid">
 
-<p>
-    Certains avantages permettent d'augmenter cette capacité.
-    Une piste d'atterrissage, l'avantage WLT ou un billet classe
-    affaires portent notamment la base à 15 objets.
-    :contentReference[oaicite:3]{index=3}
-</p>
+<article class="item-card">
 
-<p>
-    Une grande valise
-    <small>(Large Suitcase)</small>
-    ajoute actuellement <strong>3 emplacements</strong>.
-    Les valises ne se cumulent pas. :contentReference[oaicite:4]{index=4}
-</p>
+    <h3>
+        Ivoire brut
+        <small>(Raw Ivory)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>1 946 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>70 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +68 054 $ / objet
+    </div>
+
+</article>
 
 
-<h2>🦈 Exemple : l'aileron de requin</h2>
+<article class="item-card">
 
-<div class="card">
+    <h3>
+        Pointe de quartzite
+        <small>(Quartzite Point)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>114 601 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Diamants non taillés
+        <small>(Uncut Diamonds)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>192 118 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>240 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +47 882 $ / objet
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇨🇦 Canada</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Bile d'ours
+        <small>(Bear Gall)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+    <span class="tag tag-lock">Déblocage requis</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>28 475 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>35 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +6 525 $ / objet
+    </div>
+
+    <p class="note">
+        Acheteur : Nikeh Performance.
+        Le commerce doit être débloqué avant de pouvoir utiliser
+        cette méthode de revente.
+    </p>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Insuline
+        <small>(Insulin)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>2 467 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>9 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +6 533 $ / objet
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Pointe de quartz
+        <small>(Quartz Point)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>129 509 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇦🇪 Émirats arabes unis</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Ambre gris
+        <small>(Ambergris Lump)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>335 597 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>430 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +94 403 $ / objet
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Perles naturelles
+        <small>(Natural Pearls)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>98 622 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>150 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +51 378 $ / objet
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇯🇵 Japon</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Manga contrefait
+        <small>(Counterfeit Manga)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>20 587 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>70 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +49 413 $ / objet
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Viande de baleine
+        <small>(Whale Meat)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>2 050 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>40 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +37 950 $ / objet
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇨🇭 Suisse</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Poudre d'éphédrine
+        <small>(Ephedrine Powder)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>14 422 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>27 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +12 578 $ / objet
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Ampoule d'ergotamine
+        <small>(Ergotamine Ampoule)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>4 560 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>20 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +15 440 $ / objet
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Huile de safrole
+        <small>(Safrole Oil)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>4 967 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>16 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +11 033 $ / objet
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇨🇳 Chine</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Écailles de pangolin
+        <small>(Pangolin Scales)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+    <span class="tag tag-lock">Déblocage requis</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>127 969 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>205 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +77 031 $ / objet
+    </div>
+
+    <p class="note">
+        Acheteur : Nikeh Performance.
+    </p>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Poudre d'os de tigre
+        <small>(Tiger Bone Powder)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+    <span class="tag tag-lock">Déblocage requis</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>29 123 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>70 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +40 877 $ / objet
+    </div>
+
+    <p class="note">
+        Acheteur : Nikeh Performance.
+    </p>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇦🇷 Argentine</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Pointe de calcédoine
+        <small>(Chalcedony Point)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>124 364 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Fragment de météorite
+        <small>(Meteorite Fragment)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>436 555 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+
+<article class="item-card">
+
+    <h3>
+        Fossile de Patagonie
+        <small>(Patagonian Fossil)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>599 257 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇬🇧 Royaume-Uni</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Pointe de chert
+        <small>(Chert Point)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>104 228 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇲🇽 Mexique</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Pointe d'obsidienne
+        <small>(Obsidian Point)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>108 363 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇰🇾 Îles Caïmans</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Obligation au porteur
+        <small>(Bearer Bond)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>81 702 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>90 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +8 298 $ / objet
+    </div>
+
+</article>
+
+</div>
+</section>
+
+
+<h2>🇺🇸 Hawaï</h2>
+
+<section class="country-block">
+<div class="item-grid">
+
+<article class="item-card">
+
+    <h3>
+        Pointe de basalte
+        <small>(Basalt Point)</small>
+    </h3>
+
+    <span class="tag">Marché joueur</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>107 253 $</strong>
+        </div>
+
+        <div class="price">
+            Revente
+            <strong>Marché</strong>
+        </div>
+
+    </div>
+
+    <div class="profit market">
+        Vérifier le marché avant l'achat
+    </div>
+
+</article>
+
+
+<article class="item-card">
 
     <h3>
         Aileron de requin
         <small>(Shark Fin)</small>
     </h3>
 
-    <p>
-        Destination : <strong>Hawaï</strong>
+    <span class="tag tag-pnj">Revente PNJ</span>
+    <span class="tag tag-lock">Déblocage requis</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>20 200 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>66 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +45 800 $ / objet
+    </div>
+
+    <p class="note">
+        Acheteur : Nikeh Performance.
     </p>
 
-    <p>
-        Prix d'achat observé :
-        <strong>20 200 $ à 21 892 $</strong>
-    </p>
+</article>
 
-    <p>
-        Valeur de marché indiquée :
-        <strong>65 763 $</strong>
-    </p>
 
-    <p>
-        À prix d'achat minimum, l'écart théorique avec la valeur de
-        marché est donc important. Mais cela ne signifie pas que tu
-        vendras automatiquement chaque exemplaire à cette valeur.
-    </p>
+<article class="item-card">
 
-    <p>
-        <strong>
-            Vérifie toujours le marché réel avant de partir.
-        </strong>
-    </p>
+    <h3>
+        Carapace de tortue
+        <small>(Turtle Shell)</small>
+    </h3>
+
+    <span class="tag tag-pnj">Revente PNJ</span>
+
+    <div class="price-lines">
+
+        <div class="price">
+            Achat minimum
+            <strong>56 269 $</strong>
+        </div>
+
+        <div class="price">
+            Revente PNJ
+            <strong>98 000 $</strong>
+        </div>
+
+    </div>
+
+    <div class="profit good">
+        +41 731 $ / objet
+    </div>
+
+</article>
 
 </div>
+</section>
 
 
-<h2>⚠️ Certains objets nécessitent une progression</h2>
+<h2>⭐ Les meilleures marges fixes</h2>
 
 <div class="card">
 
     <p>
-        Un objet peut être disponible à l'achat à l'étranger sans que
-        cela signifie nécessairement que toutes les possibilités de
-        revente ou d'utilisation soient immédiatement accessibles
-        à ton personnage.
+        En partant du prix minimum d'achat et du prix fixe de revente
+        au PNJ, les marges théoriques les plus intéressantes sont :
     </p>
 
-    <p>
-        <strong>
-            Exemple : l'aileron de requin
-            <small>(Shark Fin)</small>.
-        </strong>
-    </p>
+    <ol>
+        <li>
+            <strong>Ambre gris</strong>
+            <small>(Ambergris Lump)</small>
+            — +94 403 $
+        </li>
 
-    <p>
-        Avant d'investir une grosse somme dans un objet dont tu ne
-        maîtrises pas encore le fonctionnement, vérifie le vendeur,
-        le marché et les éventuels prérequis directement en jeu.
+        <li>
+            <strong>Écailles de pangolin</strong>
+            <small>(Pangolin Scales)</small>
+            — +77 031 $
+        </li>
+
+        <li>
+            <strong>Ivoire brut</strong>
+            <small>(Raw Ivory)</small>
+            — +68 054 $
+        </li>
+
+        <li>
+            <strong>Perles naturelles</strong>
+            <small>(Natural Pearls)</small>
+            — +51 378 $
+        </li>
+
+        <li>
+            <strong>Manga contrefait</strong>
+            <small>(Counterfeit Manga)</small>
+            — +49 413 $
+        </li>
+
+        <li>
+            <strong>Diamants non taillés</strong>
+            <small>(Uncut Diamonds)</small>
+            — +47 882 $
+        </li>
+
+        <li>
+            <strong>Aileron de requin</strong>
+            <small>(Shark Fin)</small>
+            — +45 800 $
+        </li>
+    </ol>
+
+    <p class="note">
+        Ce classement ne tient pas compte du prix réel payé,
+        du coût du billet, du temps de voyage, des stocks disponibles
+        ou de la capacité de transport.
     </p>
 
 </div>
 
 
-<h2>🟢 Les bonnes pratiques</h2>
-
-<ul>
-
-    <li>
-        Vérifie le prix actuel juste avant d'acheter.
-    </li>
-
-    <li>
-        Compare le prix d'achat avec le prix réellement pratiqué
-        sur le marché.
-    </li>
-
-    <li>
-        Prends en compte le coût du billet.
-    </li>
-
-    <li>
-        Utilise au maximum ta capacité de transport.
-    </li>
-
-    <li>
-        Ne dépense pas tout ton capital dans une seule cargaison.
-    </li>
-
-    <li>
-        Vérifie les prérequis avant d'acheter un objet que tu ne
-        connais pas.
-    </li>
-
-    <li>
-        Pense au temps de voyage : un bénéfice élevé n'est pas
-        forcément le meilleur bénéfice par heure.
-    </li>
-
-</ul>
-
-
-<h2>🚫 Une erreur classique</h2>
+<h2>⚠️ Les objets avec prérequis</h2>
 
 <div class="card">
 
     <p>
+        Certains objets sont particulièrement intéressants à condition
+        d'avoir débloqué leur acheteur.
+    </p>
+
+    <p>
+        C'est notamment le cas des objets vendus à
+        <strong>Nikeh Performance</strong>.
+    </p>
+
+    <ul>
+        <li>
+            Bile d'ours
+            <small>(Bear Gall)</small>
+        </li>
+
+        <li>
+            Écailles de pangolin
+            <small>(Pangolin Scales)</small>
+        </li>
+
+        <li>
+            Aileron de requin
+            <small>(Shark Fin)</small>
+        </li>
+
+        <li>
+            Poudre d'os de tigre
+            <small>(Tiger Bone Powder)</small>
+        </li>
+    </ul>
+
+    <p>
         <strong>
-            « Valeur de marché : 69 637 $,
-            prix d'achat : 2 000 $,
-            donc je gagne 67 000 $. »
+            Vérifie toujours le prérequis avant de remplir ton voyage
+            avec une marchandise destinée à un PNJ particulier.
         </strong>
-    </p>
-
-    <p>
-        Pas forcément.
-    </p>
-
-    <p>
-        La valeur de marché est un indicateur. Le prix auquel les
-        joueurs achètent réellement l'objet peut être différent,
-        et les prix de la contrebande étrangère fluctuent.
-    </p>
-
-    <p>
-        Pour cette raison, les chiffres de cette page doivent servir
-        à identifier les marchandises intéressantes, pas à garantir
-        une marge.
     </p>
 
 </div>
 
 
-<h2>✈️ Contrebande et voyages</h2>
+<h2>🎒 La capacité de transport compte</h2>
 
 <p>
-    La contrebande doit être pensée comme une activité de voyage :
-    tu immobilises ton personnage pendant la durée du trajet et tu
-    dépenses de l'argent avant de réaliser ton bénéfice.
+    Une marge intéressante par objet ne suffit pas. Plus ta capacité
+    est importante, plus tu peux exploiter une destination rentable
+    lors d'un même voyage.
 </p>
 
 <p>
-    Pour optimiser un voyage, regarde donc simultanément :
+    Consulte la page consacrée aux voyages pour connaître les
+    différentes améliorations de capacité :
 </p>
-
-<ul>
-
-    <li>la destination ;</li>
-    <li>le temps de trajet ;</li>
-    <li>le prix actuel de la marchandise ;</li>
-    <li>la valeur réelle du marché ;</li>
-    <li>ta capacité de transport.</li>
-
-</ul>
 
 <p>
     <a href="voyages.html">
-        ← Retour au guide des voyages
+        ✈️ Voir le guide des voyages →
     </a>
 </p>
 
 
-<h2>💵 Les objets bon marché peuvent être excellents</h2>
+<h2>💡 Conseil</h2>
 
-<p>
-    Certains objets ont un prix d'achat très faible tout en possédant
-    une valeur de marché nettement supérieure.
-</p>
+<div class="card">
 
-<p>
-    C'est notamment le cas de plusieurs marchandises comme
-    l'ivoire brut
-    <small>(Raw Ivory)</small>
-    ou la viande de baleine
-    <small>(Whale Meat)</small>.
-</p>
+    <p>
+        Pour les objets revendables aux PNJ, la stratégie est simple :
+        <strong>acheter le moins cher possible</strong>, remplir ta
+        capacité et comparer le bénéfice obtenu avec le temps et le
+        coût du voyage.
+    </p>
 
-<p>
-    Mais une bonne marge par objet ne suffit pas : il faut également
-    regarder la quantité disponible, la capacité de transport et la
-    demande.
-</p>
+    <p>
+        Pour les objets qui doivent être vendus au marché joueur,
+        vérifie toujours le prix réel avant de partir.
+    </p>
+
+</div>
 
 
 <h2>📚 Sources</h2>
@@ -676,17 +1238,8 @@
     </li>
 
     <li>
-        <a href="https://wiki.torn.com/wiki/Item_Market"
-           target="_blank"
-           rel="noopener noreferrer">
-            Wiki officiel — Marché aux objets
-            <small>(Item Market)</small>
-        </a>
-    </li>
-
-    <li>
-        Guides et conseils de <strong>Baldr</strong>,
-        joueur vétéran de Torn.
+        Guides et conseils de
+        <strong>Baldr</strong>, joueur vétéran de Torn.
     </li>
 
 </ul>
@@ -699,7 +1252,8 @@
     <p>
         Guide rédigé et adapté en français par
         <strong>DurkSkull</strong>,
-        avec l'aide des ressources de la communauté Torn.
+        avec l'aide des ressources du Wiki officiel et de la communauté
+        Torn.
     </p>
 
     <p class="small">
@@ -753,6 +1307,7 @@
         </p>
 
     </div>
+
 </footer>
 
 </body>
