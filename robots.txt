@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://durkskull.github.io/Torn-city-fr-guide/sitemap.xml
