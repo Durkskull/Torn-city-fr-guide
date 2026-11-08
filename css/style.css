@@ -58,7 +58,7 @@ body::before {
     position: fixed;
     inset: auto 0 0 0;
     z-index: -1;
-    height: 220px;
+    height: 320px;
     background: url("../img/skyline.svg") center bottom / auto 100% repeat-x;
     opacity: 0.6;
     pointer-events: none;
@@ -119,11 +119,11 @@ nav a[aria-current="page"] {
 
 .hero {
     position: relative;
-    padding: 90px 0 150px;
+    padding: 90px 0 220px;
     border-bottom: 1px solid var(--border);
     background:
         radial-gradient(700px 240px at 50% 100%, rgba(255, 180, 84, 0.14), transparent 70%),
-        url("../img/skyline.svg") center bottom / auto 260px repeat-x;
+        url("../img/skyline.svg") center bottom / auto 400px repeat-x;
 }
 
 .eyebrow {
@@ -602,12 +602,12 @@ h3 {
     }
 
     .hero {
-        padding: 60px 0 120px;
-        background-size: auto, auto 170px;
+        padding: 60px 0 150px;
+        background-size: auto, auto 250px;
     }
 
     body::before {
-        height: 150px;
+        height: 210px;
     }
 
     .cards {
