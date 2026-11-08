@@ -28,6 +28,9 @@ Contrebande → Gagner de l'argent. Chaque page se termine par un seul lien
 - **Styles** : uniquement dans `css/style.css`. La politique CSP des pages
   (`style-src 'self'`) bloque les balises `<style>` et les attributs
   `style=""`.
+- **Images** : uniquement dans `img/` (la CSP n'autorise que les fichiers
+  du dépôt). `img/skyline.svg` est une création originale : ne pas y
+  mettre d'éléments tirés du jeu.
 - **Menu** : identique sur toutes les pages (voir `nav` dans chaque fichier).
 - **Nouvelle page** : l'ajouter au menu de chaque page, à `sitemap.xml`
   et à la liste de cartes de `index.html`.
