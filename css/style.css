@@ -82,6 +82,11 @@ nav a:hover {
     color: var(--accent);
 }
 
+nav a[aria-current="page"] {
+    color: var(--accent);
+    font-weight: 600;
+}
+
 
 /* Hero */
 
@@ -110,6 +115,15 @@ h1 {
     margin: 25px 0;
     color: var(--muted);
     font-size: 1.15rem;
+}
+
+.intro h1,
+.intro .notice {
+    color: var(--text);
+}
+
+.intro .notice {
+    font-size: 1rem;
 }
 
 
@@ -207,6 +221,329 @@ h3 {
 }
 
 
+/* ==========================================================
+   Pages de contenu
+   (tous les styles vivent ici : la CSP des pages interdit
+   les blocs <style> et les attributs style="")
+   ========================================================== */
+
+.beginner-page,
+.travel-page,
+.items-page,
+.contraband-page,
+.money-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.beginner-page > .intro,
+.travel-page > .intro,
+.money-page > .intro,
+.contraband-page > .intro {
+    max-width: 800px;
+    margin: 0 0 40px;
+}
+
+.guide-section,
+.country-section,
+.section,
+.country {
+    margin-top: 45px;
+}
+
+.guide-section h2,
+.country-section h2,
+.country h2 {
+    margin-bottom: 12px;
+}
+
+.guide-section h3 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+.sources {
+    margin-top: 55px;
+}
+
+.subtle {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+
+/* Encadrés */
+
+.notice {
+    margin: 25px 0;
+    padding: 16px 18px;
+    border-left: 4px solid currentColor;
+    background: rgba(127, 127, 127, 0.08);
+    border-radius: 8px;
+}
+
+.notice > :first-child {
+    margin-top: 0;
+}
+
+.notice > :last-child {
+    margin-bottom: 0;
+}
+
+.notice p {
+    margin: 8px 0 0;
+}
+
+.notice.success {
+    border-left-color: #238636;
+}
+
+.notice.warning {
+    border-left-color: #c98a00;
+}
+
+.notice.danger {
+    border-left-color: #c0392b;
+}
+
+
+/* Parcours numéroté */
+
+.steps {
+    counter-reset: guide-step;
+    list-style: none;
+    padding: 0;
+}
+
+.steps li {
+    counter-increment: guide-step;
+    position: relative;
+    padding: 15px 18px 15px 55px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(127, 127, 127, 0.18);
+    border-radius: 8px;
+    background: rgba(127, 127, 127, 0.04);
+}
+
+.steps li::before {
+    content: counter(guide-step);
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(127, 127, 127, 0.15);
+    font-weight: 700;
+}
+
+.steps li p {
+    margin: 6px 0 0;
+}
+
+
+/* Petites tuiles */
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.tip {
+    padding: 16px;
+    border: 1px solid rgba(127, 127, 127, 0.18);
+    border-radius: 8px;
+    background: rgba(127, 127, 127, 0.04);
+}
+
+.tip strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.item {
+    padding: 13px 15px;
+    border: 1px solid rgba(127, 127, 127, 0.18);
+    border-radius: 8px;
+    background: rgba(127, 127, 127, 0.04);
+}
+
+.item strong {
+    display: block;
+}
+
+.item small {
+    color: var(--muted);
+}
+
+
+/* Cartes compactes (pages Fleurs & peluches et Gagner de l'argent) */
+
+.items-page .cards,
+.money-page .cards {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.items-page .card,
+.money-page .card {
+    padding: 16px;
+    border-radius: 9px;
+    background: rgba(127, 127, 127, 0.04);
+}
+
+.items-page .card strong,
+.money-page .card strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.items-page .card small,
+.money-page .card small {
+    color: var(--muted);
+}
+
+.money-page .card p {
+    margin: 6px 0;
+    color: inherit;
+}
+
+
+/* Tableaux */
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 18px;
+    border: 1px solid rgba(127, 127, 127, 0.2);
+    border-radius: 10px;
+}
+
+.table-wrap table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.table-wrap .travel-table {
+    min-width: 850px;
+}
+
+.table-wrap th,
+.table-wrap td {
+    padding: 11px 14px;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.14);
+    text-align: left;
+    transition: background-color 0.12s ease;
+}
+
+.table-wrap th {
+    color: var(--muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(127, 127, 127, 0.08);
+}
+
+.table-wrap th.number,
+.table-wrap td.number {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.table-wrap tr:last-child td {
+    border-bottom: 0;
+}
+
+.table-wrap tbody tr:hover td {
+    background: rgba(255, 193, 7, 0.12);
+}
+
+.item-name,
+.destination {
+    font-weight: 700;
+}
+
+.item-name small,
+.destination small {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 400;
+}
+
+.country-cell {
+    font-weight: 600;
+}
+
+.profit {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.positive {
+    color: #3fb950;
+}
+
+.market {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 20px;
+    background: rgba(127, 127, 127, 0.12);
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+
+.tag-lock {
+    background: rgba(220, 170, 40, 0.15);
+}
+
+.section-note {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+
+/* Lien "étape suivante" en bas de page */
+
+.next-step {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 20px;
+    margin-top: 55px;
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+}
+
+.next-step p {
+    margin: 0;
+}
+
+
 /* Mobile */
 
 @media (max-width: 700px) {
@@ -231,5 +568,19 @@ h3 {
 
     .container {
         width: min(100% - 30px, 1100px);
+    }
+
+    .beginner-page,
+    .travel-page,
+    .items-page,
+    .contraband-page,
+    .money-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .table-wrap th,
+    .table-wrap td {
+        padding: 9px 10px;
     }
 }
