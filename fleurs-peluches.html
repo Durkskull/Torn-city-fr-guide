@@ -24,121 +24,6 @@
     href="https://durkskull.github.io/Torn-city-fr-guide/fleurs-peluches.html"
 >
 <link rel="stylesheet" href="css/style.css">
-
-<style>
-.items-page {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px 60px;
-}
-
-.notice {
-    margin: 25px 0;
-    padding: 16px 18px;
-    border-left: 4px solid currentColor;
-    background: rgba(127,127,127,.08);
-    border-radius: 8px;
-}
-
-.notice.success {
-    border-left-color: #238636;
-}
-
-.section {
-    margin-top: 45px;
-}
-
-.table-wrap {
-    overflow-x: auto;
-    border: 1px solid rgba(127,127,127,.2);
-    border-radius: 10px;
-    margin-top: 18px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 650px;
-}
-
-th,
-td {
-    padding: 11px 14px;
-    border-bottom: 1px solid rgba(127,127,127,.14);
-    transition:
-        background-color .12s ease,
-        box-shadow .12s ease;
-}
-
-th {
-    font-size: .78rem;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-    opacity: .7;
-    text-align: left;
-    background: rgba(127,127,127,.08);
-}
-
-th.number,
-td.number {
-    text-align: right;
-    white-space: nowrap;
-}
-
-/* Ligne illuminée au survol */
-tbody tr:hover td {
-    background: rgba(255,193,7,.18);
-}
-
-tbody tr:hover td:first-child {
-    box-shadow: inset 4px 0 0 currentColor;
-}
-
-.item-name {
-    font-weight: 700;
-}
-
-.item-name small {
-    display: block;
-    font-size: .78rem;
-    font-weight: 400;
-    opacity: .58;
-    margin-top: 2px;
-}
-
-.country {
-    font-weight: 600;
-}
-
-.small {
-    font-size: .88rem;
-    opacity: .7;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.card {
-    padding: 16px;
-    border: 1px solid rgba(127,127,127,.18);
-    border-radius: 9px;
-    background: rgba(127,127,127,.04);
-}
-
-.card strong {
-    display: block;
-    margin-bottom: 6px;
-}
-
-.sources {
-    margin-top: 55px;
-}
-</style>
 </head>
 
 
@@ -152,34 +37,14 @@ tbody tr:hover td:first-child {
     Torn City France
 </p>
 
-<nav aria-label="Navigation principale">
-
-<a href="index.html">
-    Accueil
-</a>
-
-<a href="guide-debutant.html">
-    Débuter
-</a>
-
-<a href="gagner-argent.html">
-    Gagner de l'argent
-</a>
-
-<a href="voyages.html">
-    Voyages
-</a>
-
-<a href="fleurs-peluches.html"
-   aria-current="page">
-    Fleurs &amp; peluches
-</a>
-
-<a href="contrebande.html">
-    Contrebande
-</a>
-
-</nav>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="guide-debutant.html">Débuter</a>
+            <a href="voyages.html">Voyages</a>
+            <a href="fleurs-peluches.html" aria-current="page">Fleurs &amp; peluches</a>
+            <a href="contrebande.html">Contrebande</a>
+            <a href="gagner-argent.html">Gagner de l'argent</a>
+        </nav>
 
 </div>
 
@@ -289,7 +154,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇲🇽 Mexique
 </td>
 
@@ -309,7 +174,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇰🇾 Îles Caïmans
 </td>
 
@@ -329,7 +194,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇨🇦 Canada
 </td>
 
@@ -349,7 +214,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇬🇧 Royaume-Uni
 </td>
 
@@ -369,7 +234,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇬🇧 Royaume-Uni
 </td>
 
@@ -389,7 +254,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇦🇷 Argentine
 </td>
 
@@ -409,7 +274,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇨🇭 Suisse
 </td>
 
@@ -429,7 +294,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇨🇳 Chine
 </td>
 
@@ -449,7 +314,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇦🇪 Émirats arabes unis
 </td>
 
@@ -469,7 +334,7 @@ tbody tr:hover td:first-child {
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇿🇦 Afrique du Sud
 </td>
 
@@ -551,7 +416,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇲🇽 Mexique
 </td>
 
@@ -571,7 +436,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇰🇾 Îles Caïmans
 </td>
 
@@ -591,7 +456,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇨🇦 Canada
 </td>
 
@@ -611,7 +476,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇺🇸 Hawaï
 </td>
 
@@ -631,7 +496,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇬🇧 Royaume-Uni
 </td>
 
@@ -651,7 +516,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇦🇷 Argentine
 </td>
 
@@ -671,7 +536,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇨🇭 Suisse
 </td>
 
@@ -691,7 +556,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇯🇵 Japon
 </td>
 
@@ -711,7 +576,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇨🇳 Chine
 </td>
 
@@ -731,7 +596,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇦🇪 Émirats arabes unis
 </td>
 
@@ -751,7 +616,7 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 </span>
 </td>
 
-<td class="country">
+<td class="country-cell">
     🇿🇦 Afrique du Sud
 </td>
 
@@ -778,132 +643,60 @@ directement à Torn chez Bits 'n' Bobs et complètent le set du musée.
 
 <section class="section">
 
-<h2>
-    💰 Rentabilité
-</h2>
+<h2>💰 Rentabilité</h2>
 
+<p>
+    La méthode de calcul complète (marge par emplacement, durée des
+    voyages) est sur la page
+    <a href="gagner-argent.html">Gagner de l'argent</a>.
+    Voici ce qui compte pour les fleurs et les peluches :
+</p>
 
 <div class="cards">
 
+<div class="card">
+<strong>1. Prix d'achat</strong>
+<small>Le prix fixe payé à l'étranger.</small>
+</div>
 
 <div class="card">
-
-<strong>
-    1. Prix d'achat
-</strong>
-
-<small>
-    Le prix fixe payé à l'étranger.
-</small>
-
+<strong>2. Prix de vente</strong>
+<small>Le prix auquel tu peux réellement vendre l'objet.</small>
 </div>
-
 
 <div class="card">
-
-<strong>
-    2. Prix de vente
-</strong>
-
-<small>
-    Le prix auquel tu peux réellement vendre l'objet.
-</small>
-
+<strong>3. Taxe du marché</strong>
+<small>L'Item Market applique une taxe de vente de 5 %.</small>
 </div>
-
 
 <div class="card">
-
-<strong>
-    3. Taxe du marché
-</strong>
-
-<small>
-    L'Item Market applique une taxe de vente de 5 %.
-</small>
-
+<strong>4. Coût du voyage</strong>
+<small>Le coût du déplacement doit entrer dans ton calcul.</small>
 </div>
-
 
 <div class="card">
-
-<strong>
-    4. Coût du voyage
-</strong>
-
-<small>
-    Le coût du déplacement doit entrer dans ton calcul.
-</small>
-
+<strong>5. Temps de voyage</strong>
+<small>Une grosse marge n'est pas forcément meilleure si le voyage est très long.</small>
 </div>
 
-
-<div class="card">
-
-<strong>
-    5. Temps de voyage
-</strong>
-
-<small>
-    Une grosse marge n'est pas forcément meilleure
-    si le voyage est très long.
-</small>
-
 </div>
-
-
-</div>
-
 
 <div class="notice success">
 
-<strong>
-    🏪 Tu possèdes un Bazaar ?
-</strong>
+<strong>🏪 Tu possèdes un Bazaar ?</strong>
 
 <p>
-
-Les ventes réalisées dans ton <strong>Bazaar</strong>
-ne sont pas soumises aux 5 % de taxe de vente
-de l'Item Market.
-
+    Les ventes réalisées dans ton <strong>Bazaar</strong> ne sont pas
+    soumises aux 5 % de taxe de vente de l'Item Market. Cela peut
+    améliorer directement ta marge, surtout pour les objets à faible
+    marge.
 </p>
 
 <p>
-
-Cela peut améliorer directement ta marge,
-surtout pour les objets à faible marge.
-
-</p>
-
-<p class="small">
-
-Compare donc le bénéfice net d'une vente sur l'Item Market
-avec celui d'une vente dans ton Bazaar.
-
-</p>
-
-</div>
-
-
-<div class="notice">
-
-<strong>
-    💡 Exemple
-</strong>
-
-<p>
-
-Si tu achètes un objet 10 000 $ et le revends 15 000 $,
-ta marge brute est de 5 000 $.
-
-</p>
-
-<p>
-
-Sur l'Item Market, la taxe réduit le montant encaissé.
-Dans ton Bazaar, cette taxe de vente n'est pas appliquée.
-
+    Exemple : tu achètes un objet 10 000 $ et tu le revends 15 000 $,
+    soit 5 000 $ de marge brute. Sur l'Item Market, la taxe retire
+    environ 750 $ (5 % de 15 000 $) ; dans ton Bazaar, rien n'est
+    retiré.
 </p>
 
 </div>
@@ -918,65 +711,36 @@ Dans ton Bazaar, cette taxe de vente n'est pas appliquée.
 
 <section class="section">
 
-<h2>
-    🏛️ Le musée
-</h2>
-
+<h2>🏛️ Le musée</h2>
 
 <p>
-
-Après avoir terminé la formation
-<strong>History Studies</strong>,
-un set complet de peluches ou de fleurs exotiques
-peut être échangé contre des points du musée.
-
+    Après avoir terminé la formation <strong>History Studies</strong>,
+    un set complet de peluches ou de fleurs exotiques peut être échangé
+    contre des points du musée.
 </p>
-
 
 <div class="cards">
 
+<div class="card">
+<strong>🌸 Set de fleurs exotiques</strong>
+<small>Les 11 fleurs exotiques forment un set complet.</small>
+</div>
 
 <div class="card">
-
-<strong>
-    🌸 Set de fleurs exotiques
-</strong>
-
-<small>
-    Les 11 fleurs exotiques forment un set complet.
-</small>
-
+<strong>🧸 Set de peluches</strong>
+<small>Les peluches étrangères et celles disponibles à Torn composent le set complet.</small>
 </div>
 
-
-<div class="card">
-
-<strong>
-    🧸 Set de peluches
-</strong>
-
-<small>
-    Les peluches étrangères et celles disponibles à Torn
-    composent le set complet.
-</small>
-
 </div>
-
-
-</div>
-
 
 <div class="notice">
 
-<strong>
-    💡 Ne vends pas automatiquement tout.
-</strong>
+<strong>💡 Ne vends pas automatiquement tout.</strong>
 
 <p>
-
-Si tu cherches à compléter un set, conserver certains objets
-peut être plus intéressant que de les vendre immédiatement.
-
+    Si tu cherches à compléter un set, conserver certains objets peut
+    être plus intéressant que de les vendre immédiatement : un objet
+    peut avoir une valeur supplémentaire pour un collectionneur.
 </p>
 
 </div>
@@ -985,163 +749,10 @@ peut être plus intéressant que de les vendre immédiatement.
 
 
 
-<!-- ========================= -->
-<!-- CONSEILS -->
-<!-- ========================= -->
-
-<section class="section">
-
-<h2>
-    🧠 Conseils
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<strong>
-    Ne regarde pas uniquement la marge.
-</strong>
-
-<small>
-    Compare la marge avec le temps nécessaire pour voyager.
-</small>
-
+<div class="next-step">
+    <p><strong>Étape suivante :</strong> les objets de contrebande, revendables à des PNJ.</p>
+    <a class="button" href="contrebande.html">Contrebande →</a>
 </div>
-
-
-<div class="card">
-
-<strong>
-    Surveille le marché.
-</strong>
-
-<small>
-    Les valeurs changent régulièrement.
-</small>
-
-</div>
-
-
-<div class="card">
-
-<strong>
-    Pense aux sets.
-</strong>
-
-<small>
-    Un objet peut avoir une valeur supplémentaire
-    pour un collectionneur.
-</small>
-
-</div>
-
-
-<div class="card">
-
-<strong>
-    Regarde ton inventaire.
-</strong>
-
-<small>
-    La rentabilité dépend aussi du nombre d'objets
-    que tu peux rapporter.
-</small>
-
-</div>
-
-
-<div class="card">
-
-<strong>
-    🏪 Pense au Bazaar.
-</strong>
-
-<small>
-    Ses ventes ne subissent pas les 5 % de taxe
-    de l'Item Market.
-</small>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ========================= -->
-<!-- NAVIGATION -->
-<!-- ========================= -->
-
-<section class="section">
-
-<h2>
-    ➡️ Pour continuer
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<strong>
-    ✈️ Voyages
-</strong>
-
-<p>
-    Compare les destinations et les temps de voyage.
-</p>
-
-<a href="voyages.html">
-    Voir le guide des voyages
-</a>
-
-</div>
-
-
-<div class="card">
-
-<strong>
-    💰 Gagner de l'argent
-</strong>
-
-<p>
-    Découvre d'autres méthodes pour développer ton capital.
-</p>
-
-<a href="gagner-argent.html">
-    Voir le guide
-</a>
-
-</div>
-
-
-<div class="card">
-
-<strong>
-    📦 Contrebande
-</strong>
-
-<p>
-    Découvre les objets étrangers pouvant être revendus
-    aux PNJ ou sur le marché.
-</p>
-
-<a href="contrebande.html">
-    Voir le guide
-</a>
-
-</div>
-
-
-</div>
-
-</section>
 
 
 

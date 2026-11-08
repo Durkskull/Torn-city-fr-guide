@@ -11,130 +11,17 @@
 
     <meta name="robots" content="index, follow, max-image-preview:large">
 
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self'; style-src 'self'; script-src 'none'; connect-src 'none';"
+    >
+
     <link rel="canonical"
           href="https://durkskull.github.io/Torn-city-fr-guide/voyages.html">
 
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        .travel-page {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 20px 60px;
-        }
-
-        .intro {
-            max-width: 800px;
-            margin-bottom: 35px;
-        }
-
-        .notice {
-            margin: 25px 0;
-            padding: 16px 18px;
-            border-left: 4px solid currentColor;
-            background: rgba(127,127,127,.08);
-            border-radius: 6px;
-        }
-
-        .travel-table-wrap {
-            overflow-x: auto;
-            border: 1px solid rgba(127,127,127,.2);
-            border-radius: 10px;
-        }
-
-        .travel-table {
-            width: 100%;
-            min-width: 850px;
-            border-collapse: collapse;
-        }
-
-        .travel-table th,
-        .travel-table td {
-            padding: 11px 13px;
-            border-bottom: 1px solid rgba(127,127,127,.14);
-        }
-
-        .travel-table th {
-            text-align: left;
-            font-size: .78rem;
-            text-transform: uppercase;
-            letter-spacing: .04em;
-            opacity: .7;
-            background: rgba(127,127,127,.08);
-        }
-
-        .travel-table th.number,
-        .travel-table td.number {
-            text-align: right;
-            white-space: nowrap;
-        }
-
-        .travel-table tr:last-child td {
-            border-bottom: 0;
-        }
-
-        .destination {
-            font-weight: 700;
-        }
-
-        .destination small {
-            display: block;
-            margin-top: 2px;
-            font-size: .78rem;
-            font-weight: 400;
-            opacity: .6;
-        }
-
-        .highlight {
-            font-weight: 700;
-        }
-
-        .subtle {
-            font-size: .85rem;
-            opacity: .7;
-        }
-
-        .country-section {
-            margin-top: 45px;
-        }
-
-        .country-section h2 {
-            margin-bottom: 10px;
-        }
-
-        .item-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-            margin-top: 18px;
-        }
-
-        .item {
-            padding: 13px 15px;
-            border: 1px solid rgba(127,127,127,.18);
-            border-radius: 8px;
-            background: rgba(127,127,127,.04);
-        }
-
-        .item strong {
-            display: block;
-        }
-
-        .item small {
-            opacity: .6;
-        }
-
-        .sources {
-            margin-top: 50px;
-        }
-
-        @media (max-width: 700px) {
-            .travel-page {
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -147,10 +34,10 @@
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
             <a href="guide-debutant.html">Débuter</a>
-            <a href="gagner-argent.html">Gagner de l'argent</a>
             <a href="voyages.html" aria-current="page">Voyages</a>
             <a href="fleurs-peluches.html">Fleurs &amp; peluches</a>
             <a href="contrebande.html">Contrebande</a>
+            <a href="gagner-argent.html">Gagner de l'argent</a>
         </nav>
 
     </div>
@@ -197,7 +84,7 @@
             <em>Mailing Yourself Abroad</em>.
         </p>
 
-        <div class="travel-table-wrap">
+        <div class="table-wrap">
 
             <table class="travel-table">
 
@@ -360,88 +247,25 @@
         <h2>🧸 Que rapporter ?</h2>
 
         <p>
-            Chaque destination possède des objets exclusifs.
-            Les fleurs et les peluches sont particulièrement
-            recherchées par les joueurs et peuvent être revendues
-            sur le marché.
+            Chaque destination possède des objets exclusifs : en général
+            une fleur, souvent une peluche, et parfois de la contrebande.
+            La liste complète par pays, avec les prix d'achat, se trouve
+            sur les pages dédiées.
         </p>
 
-        <div class="item-list">
+        <div class="cards">
 
-            <div class="item">
-                <strong>🇲🇽 Mexique</strong>
-                <small>Jaguar — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Dahlia — Fleur <em>(Flower)</em></small>
-            </div>
+            <article class="card">
+                <h3>🌸 Fleurs &amp; peluches</h3>
+                <p>Prix d'achat par pays, sets du musée, vente et taxes.</p>
+                <a href="fleurs-peluches.html">Voir les fleurs et peluches →</a>
+            </article>
 
-            <div class="item">
-                <strong>🇰🇾 Îles Caïmans</strong>
-                <small>Stingray — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Banana Orchid — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇨🇦 Canada</strong>
-                <small>Wolverine — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Crocus — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇺🇸 Hawaï</strong>
-                <small>Orchid — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇬🇧 Royaume-Uni</strong>
-                <small>Nessie / Red Fox — Peluches <em>(Plushies)</em></small>
-                <br>
-                <small>Heather — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇦🇷 Argentine</strong>
-                <small>Monkey — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Ceibo — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇨🇭 Suisse</strong>
-                <small>Chamois — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Edelweiss — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇯🇵 Japon</strong>
-                <small>Cherry Blossom — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇨🇳 Chine</strong>
-                <small>Panda — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Peony — Fleur <em>(Flower)</em></small>
-                <br>
-                <small>Pangolin Scales — Contrebande</small>
-            </div>
-
-            <div class="item">
-                <strong>🇦🇪 Émirats arabes unis</strong>
-                <small>Camel — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>Tribulus Omanense — Fleur <em>(Flower)</em></small>
-            </div>
-
-            <div class="item">
-                <strong>🇿🇦 Afrique du Sud</strong>
-                <small>Lion — Peluche <em>(Plushie)</em></small>
-                <br>
-                <small>African Violet — Fleur <em>(Flower)</em></small>
-            </div>
+            <article class="card">
+                <h3>☠️ Contrebande</h3>
+                <p>Objets des marchés noirs, prix PNJ et conditions de déblocage.</p>
+                <a href="contrebande.html">Voir la contrebande →</a>
+            </article>
 
         </div>
 
@@ -453,32 +277,12 @@
         <h2>💰 Voyager pour gagner de l'argent</h2>
 
         <p>
-            La rentabilité d'un voyage dépend du prix actuel des objets
-            sur le marché, du nombre d'objets que tu peux transporter,
-            du coût du voyage et surtout du temps passé dans les airs.
-        </p>
-
-        <div class="notice">
-
-            <strong>Ne cherche pas forcément le plus gros bénéfice par voyage.</strong>
-
-            <p>
-                Une destination très rentable par objet peut être moins
-                intéressante sur une longue période si le trajet est beaucoup
-                plus long.
-            </p>
-
-            <p>
-                Compare plutôt le bénéfice potentiel avec le temps total
-                nécessaire pour effectuer tes voyages.
-            </p>
-
-        </div>
-
-        <p>
-            Pour les fleurs et les peluches, les prix du marché peuvent
-            changer. Il n'existe donc pas une destination définitivement
-            meilleure que toutes les autres.
+            Ne cherche pas forcément le plus gros bénéfice par voyage :
+            une destination très rentable par objet peut être moins
+            intéressante sur une longue période si le trajet est beaucoup
+            plus long. Compare le bénéfice potentiel avec le temps total
+            nécessaire. La méthode de calcul complète est sur la page
+            <a href="gagner-argent.html">Gagner de l'argent</a>.
         </p>
 
     </section>
@@ -552,6 +356,12 @@
         </ul>
 
     </section>
+
+
+    <div class="next-step">
+        <p><strong>Étape suivante :</strong> regarde ce que tu peux rapporter.</p>
+        <a class="button" href="fleurs-peluches.html">Fleurs &amp; peluches →</a>
+    </div>
 
 
     <section class="sources">
